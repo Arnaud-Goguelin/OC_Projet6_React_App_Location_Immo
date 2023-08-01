@@ -1,36 +1,29 @@
 import Thumb from './thumb'
+// import ThumbBackGround from './housingGalleryBackGround';
 import useFetch from '../utils/useFetch'
-import HousingData from '../data/housing.json' 
 
 function HousingGallery() {
 
-    // const { data, isLoading, error } = useFetch('http://localhost:3000/src/data/housing.json');
-    // const { housing } = data;
-    // console.log(housing)
-    // console.log(data)
+    const { data, isLoading, error } = useFetch('http://localhost:3000/housing.json');
 
-    // if (error) {
-    //     return <span>Oups il y a eu un problème</span>
-    //   }
-// async function test() {
-//     const data = await fetch('../data.housing.json')
-//     const gooddata = await data.json()
-//     console.log(data)
-// }
-// test()
-    const housing = HousingData
-    console.log(housing)
+    if (error) {
+        return <span>Il y a eu un problème</span>
+      }
 
     return(
-        <main>
-            {housing.map(rental => (
-                <Thumb
-                key={rental.id} 
-                />
-            )
-            )}
-            
-        </main>
+        <section>
+            { isLoading ? 
+            (<span>Patientez, chargement des données</span>)
+            :       
+            (<div>
+                {data.map(rental => (
+                    <Thumb
+                    key={rental.id} 
+                    />
+                ))}
+            </div> )
+            }
+        </section>
     )
 }
 
