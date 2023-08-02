@@ -13,7 +13,7 @@ function Carousel({pictures}) {
         currentPictureIndex > 0 ? updatePictureIndex(currentPictureIndex - 1) : updatePictureIndex(pictures.length - 1)
     }
 
-    useEffect(() => { setInterval(nextPictureIndex, 5000) }, [currentPictureIndex])
+    useEffect(() => { setTimeout(nextPictureIndex, 2000) }, [currentPictureIndex])
 
     return(
         <div 
