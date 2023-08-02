@@ -1,5 +1,5 @@
-import logoWhite from '../assets/images/logoWhite.png'
-import '../assets/style/footer.css'
+import logoWhite from '../../assets/images/logoWhite.png'
+import '../../assets/style/secondarycomponentsStyle/footer.scss'
 
 function Footer() {
 

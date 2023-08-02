@@ -1,5 +1,5 @@
-import Banner from '../components/banner'
-import HousingGallery from '../components/landingHousingGallery'
+import Banner from '../components/secondaryComponents/banner'
+import HousingGallery from '../components/primaryComponents/landingHousingGallery'
 
 function LandingPage() {
     return(
