@@ -24,6 +24,7 @@ function HousingGallery() {
                 {data.filter(rental => data.indexOf(rental) < 9 ).map(({id, title, cover, host}) => (
                     <Thumb
                     key={id}
+                    id={id}
                     title={title}
                     cover ={cover}
                     host={host.name}

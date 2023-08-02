@@ -3,10 +3,10 @@ import HousingGallery from '../components/primaryComponents/landingHousingGaller
 
 function LandingPage() {
     return(
-        <div>
+        <>
             <Banner />
             <HousingGallery />
-        </div>
+        </>
     )
 }
 
