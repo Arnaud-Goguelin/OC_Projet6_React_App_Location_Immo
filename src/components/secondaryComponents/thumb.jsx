@@ -6,6 +6,7 @@ function Thumb({title, cover, id}) {
     return(
         <>
         <Link
+        key={id}
         to={`/Housing/${id}`} 
         className='housingGallery__thumb' 
         style={{backgroundImage : `url(${cover})`}}

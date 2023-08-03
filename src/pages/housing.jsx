@@ -2,7 +2,6 @@ import { useContext } from 'react'
 import { DataContext } from '../utils/context';
 import { useParams } from 'react-router-dom';
 import Carousel from '../components/secondaryComponents/carousel'
-import Thumb from '../components/secondaryComponents/thumb';
 
 function Housing() {
 

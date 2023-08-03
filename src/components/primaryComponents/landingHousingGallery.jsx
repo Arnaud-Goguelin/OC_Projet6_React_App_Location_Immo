@@ -1,27 +1,58 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { DataContext } from '../../utils/context';
 import Thumb from '../secondaryComponents/thumb'
+import Pagination from '../secondaryComponents/pagination';
 import '../../assets/style/primaryComponentsStyle/housingBackground.scss'
 
-
+// const LIMIT_PER_PAGE = 10;
+ 
+// const ArticlesList = ({articles}) => {
+ 
+//     const [page, setPage] = React.useState(0);
+     
+//     const MAX_PAGE = Math.ceil(articles.length / LIMIT_PER_PAGE);
+     
+//     function getSequence() {
+         
+//         return articles.slice(LIMIT_PER_PAGE * page, LIMIT_PER_PAGE * (page + 1) );
+//     }
+ 
+// };
 
 function HousingGallery() {
 
     const { data, isLoading, error } = useContext(DataContext)
+
+    const limitPerPage = 6
+    const [ currentPage, setPage ] = useState(1)
+    let maxPage = null
+
+    function defineMaxPage() {
+        isLoading? maxPage=null : maxPage = Math.ceil(data.length / limitPerPage)
+    }
+
+    defineMaxPage()
+
+
+    function previousPage() {
+        currentPage === 1 ? setPage(maxPage) : setPage(currentPage - 1)
+    }
+
+    function nextPage() {
+        currentPage === maxPage ? setPage(1) : setPage(currentPage + 1)
+    }
 
     if (error) {
         return <span>Il y a eu un problème: {error}</span>
       }
 
     return(
-        <section className='housingGallery'>
+        <section className='housingGallery' >
             { isLoading ? 
             (<span>Patientez, chargement des données</span>)
             :       
             (<>
-            { /* l'usage de filter ici permettra à l'avenir de trier les locations à afficher selon d'autres critères que leur position dans la base de donnée, autrement un data.slice(0,9) aurait suffit
-            On limite volontairement le nombre d'affichage. Ici, avec 20 locations, l'affichage est encore correct pour l'utilisateur, mais si la base de données s'étoffz (ex: booking.com), Kasa va perdre en performances et être inadaptée dans son utilisation*/ }
-                {data.filter(rental => data.indexOf(rental) < 9 ).map(({id, title, cover, host}) => (
+                {data.slice(limitPerPage*(currentPage - 1), limitPerPage*(currentPage)).map(({id, title, cover, host}) => (
                     <Thumb
                     key={id}
                     id={id}
@@ -30,8 +61,17 @@ function HousingGallery() {
                     host={host.name}
                     />
                 ))}
+                <Pagination className="pagination"
+                    key={`page n°${currentPage}`}
+                    maxPage={maxPage}
+                    currentPage={currentPage}
+                    previousPage={previousPage}
+                    nextPage={nextPage}
+                />
             </> )
             }
+
+
         </section>
     )
 }

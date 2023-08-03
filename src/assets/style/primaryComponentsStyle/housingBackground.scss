@@ -1,9 +1,10 @@
 .housingGallery {
     margin: 25px auto;
-    padding: 50px;
+    padding: 50px 25px;
     background-color: #F6F6F6;
     border-radius: 25px;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content:flex-start;
+    position: relative;
 }
