@@ -6,13 +6,12 @@ function Thumb({title, cover, id}) {
     return(
         <>
         <Link
-        key={id}
         to={`/Housing/${id}`} 
         className='housingGallery__thumb' 
         style={{backgroundImage : `url(${cover})`}}
         >
             <div className='thumb__overShadow'></div>
-            <div className='thumb__text'><p>{title}</p></div>
+            <p className='thumb__text'>{title}</p>
         </Link>
         </>
     )

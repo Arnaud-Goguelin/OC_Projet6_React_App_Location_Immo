@@ -4,21 +4,6 @@ import Thumb from '../secondaryComponents/thumb'
 import Pagination from '../secondaryComponents/pagination';
 import '../../assets/style/primaryComponentsStyle/housingBackground.scss'
 
-// const LIMIT_PER_PAGE = 10;
- 
-// const ArticlesList = ({articles}) => {
- 
-//     const [page, setPage] = React.useState(0);
-     
-//     const MAX_PAGE = Math.ceil(articles.length / LIMIT_PER_PAGE);
-     
-//     function getSequence() {
-         
-//         return articles.slice(LIMIT_PER_PAGE * page, LIMIT_PER_PAGE * (page + 1) );
-//     }
- 
-// };
-
 function HousingGallery() {
 
     const { data, isLoading, error } = useContext(DataContext)
@@ -34,31 +19,27 @@ function HousingGallery() {
     defineMaxPage()
 
 
-    function previousPage() {
-        currentPage === 1 ? setPage(maxPage) : setPage(currentPage - 1)
-    }
-
-    function nextPage() {
-        currentPage === maxPage ? setPage(1) : setPage(currentPage + 1)
-    }
+    function previousPage() {currentPage === 1 ? setPage(maxPage) : setPage(currentPage - 1)}
+    function selectPage(p) {setPage(p)}
+    function nextPage() {currentPage === maxPage ? setPage(1) : setPage(currentPage + 1)}
 
     if (error) {
         return <span>Il y a eu un problème: {error}</span>
       }
 
     return(
-        <section className='housingGallery' >
+        <section className='housingBackground' >
             { isLoading ? 
             (<span>Patientez, chargement des données</span>)
             :       
             (<>
-                {data.slice(limitPerPage*(currentPage - 1), limitPerPage*(currentPage)).map(({id, title, cover, host}) => (
+                {data.slice(limitPerPage*(currentPage - 1), limitPerPage*(currentPage))
+                .map(({id, title, cover}) => (
                     <Thumb
                     key={id}
                     id={id}
                     title={title}
                     cover ={cover}
-                    host={host.name}
                     />
                 ))}
                 <Pagination className="pagination"
@@ -67,6 +48,7 @@ function HousingGallery() {
                     currentPage={currentPage}
                     previousPage={previousPage}
                     nextPage={nextPage}
+                    selectPage={selectPage}
                 />
             </> )
             }
