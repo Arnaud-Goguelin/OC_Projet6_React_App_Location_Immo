@@ -1,0 +1,39 @@
+.Introduction__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Introduction__housingPresentation {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        color:#FF6060;
+
+        .Introduction__title {
+            font-weight: 500;
+            font-size: 2em;
+        }
+    }
+
+    .Introduction__ownerPresentation {
+        display:flex;
+        flex-direction: column;
+        justify-self:flex-end;
+
+            .Introduction__ownerContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color:#FF6060;
+
+                .Introduction__ownerContainer, img {
+                    border-radius: 75px;
+                    width: 65px;
+                    height: 65px;
+                    margin: 0 0 0 20px;
+                }
+
+            }
+    }
+
+}

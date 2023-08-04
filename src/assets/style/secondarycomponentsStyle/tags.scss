@@ -1,0 +1,13 @@
+.Introduction__tagsContainer {
+    display: flex;
+
+    .Introduction__tags {
+        margin: 0 10px 0 0;
+        width: auto;
+        padding: 5px 40px;
+        border-radius: 10px;
+        background-color: #FF6060;
+        color: white;
+        text-align: center;
+    }
+}
