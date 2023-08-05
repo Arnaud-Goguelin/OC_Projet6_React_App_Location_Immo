@@ -16,8 +16,8 @@ function Pagination({ currentPage, maxPage, nextPage, previousPage, selectPage }
         <ul className="pagination__container">
             <button 
                 onClick={previousPage} 
-                className="pagination__Button navigatation previous" 
-                aria-label='page précédente'
+                className='pagination__Button navigatation previous'
+                aria-label='Aller à la page précédente'
             >
             </button>
             {pages.map((page) =>
@@ -26,14 +26,15 @@ function Pagination({ currentPage, maxPage, nextPage, previousPage, selectPage }
                     onClick={() => selectPage(page)} 
                     className={`pagination__Button ${currentPage === page ? 'active' : ''}`} 
                     aria-pressed={`${currentPage === page ? 'true' : 'false'}`}
+                    aria-label={`Afficher page n°${page}`}
                 >
                     {page}
                 </button>
             )}
             <button 
                 onClick={nextPage} 
-                className="pagination__Button navigatation next" 
-                aria-label='page suivante'
+                className='pagination__Button navigatation next'
+                aria-label='Aller à la page suivante'
             >
             </button>
         </ul>

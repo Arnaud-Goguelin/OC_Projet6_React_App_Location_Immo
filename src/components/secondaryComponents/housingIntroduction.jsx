@@ -37,7 +37,8 @@ function Introduction({title, location, tags, host, rating}) {
                         <img src={`${host.picture}`} alt={`portrait de ${host.name}`} />
                     </div>
 
-                    <Rating 
+                    <Rating
+                        key={rating.indexOf()} 
                         rating={rating}
                         rateRange={rateRange}
                     />

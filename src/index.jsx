@@ -1,7 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Layout from './components/primaryComponents/layout'
+import Layout from './components/layout/layout'
 import DataProvider from './utils/context'
 import LandingPage from './pages/landingPage'
 import Housing from './pages/housing'

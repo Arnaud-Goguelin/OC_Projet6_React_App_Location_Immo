@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import Carousel from '../components/secondaryComponents/housingCarousel'
 import Introduction from '../components/secondaryComponents/housingIntroduction';
 import Dropdown from '../components/secondaryComponents/dropdown';
+import '../assets/style/primaryComponentsStyle/housing.scss'
 
 function Housing() {
 
@@ -17,7 +18,7 @@ function Housing() {
     return(
         <>
             { isLoading ? 
-                (<span key={`${id}+${error}`}>Patientez, chargement des données</span>)
+                (<span>Patientez, chargement des données</span>)
                 :       
                 (<>
                     {data.filter(rental => rental.id === id)
@@ -28,18 +29,25 @@ function Housing() {
                                 pictures={pictures}
                             />
                             <Introduction 
-                                key={id}
+                                key={`${id}-Introduction`}
                                 title={title}
                                 location={location}
                                 tags={tags}
                                 host={host}
                                 rating={rating}
                             />
-                            <Dropdown
-                            data={data}
-                            description={description}
-                            equipments={equipments}
-                            />
+                            <div className='Housing__dropwdownContainer'>
+                                <Dropdown
+                                    key={`${id}-Description`}
+                                    dropdownTitle={'Description'}
+                                    dropdownContent={description}
+                                />
+                                <Dropdown
+                                key={`${id}-Equipements`}
+                                    dropdownTitle={'Equipements'}
+                                    dropdownContent={equipments}
+                                />
+                            </div>
                         </>
                     ))} 
                 </>)

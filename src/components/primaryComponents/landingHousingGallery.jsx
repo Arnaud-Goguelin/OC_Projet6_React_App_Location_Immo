@@ -8,6 +8,7 @@ function HousingGallery() {
 
     const { data, isLoading, error } = useContext(DataContext)
 
+    //Gestion de la pagination, il suffit de modifier limitPerPage (nb d'éléments affichés par page) pour changer le nombre de page et les boutons de navigations associés
     const limitPerPage = 6
     const [ currentPage, setPage ] = useState(1)
     let maxPage = null
