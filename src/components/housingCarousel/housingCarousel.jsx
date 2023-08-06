@@ -1,4 +1,4 @@
-import '../../assets/style/secondarycomponentsStyle/carousel.scss'
+import './carousel.scss'
 import { useState, useEffect } from 'react'
 
 function Carousel({pictures}) {

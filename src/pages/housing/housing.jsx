@@ -1,14 +1,15 @@
 import { useContext } from 'react'
-import { DataContext } from '../utils/context';
+import { DataContext } from '../../utils/context';
 import { useParams } from 'react-router-dom';
-import Carousel from '../components/secondaryComponents/housingCarousel'
-import Introduction from '../components/secondaryComponents/housingIntroduction';
-import Dropdown from '../components/secondaryComponents/dropdown';
-import '../assets/style/primaryComponentsStyle/housing.scss'
+import Carousel from '../../components/housingCarousel/housingCarousel'
+import Introduction from '../../components/housingIntroduction/housingIntroduction';
+import Dropdown from '../../components/dropdown/dropdown';
+import './housing.scss'
 
 function Housing() {
 
     const { id } = useParams()
+    {console.log(id)}
     const { data, isLoading, error } = useContext(DataContext)
 
     if (error) {

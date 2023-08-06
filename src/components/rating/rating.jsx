@@ -1,6 +1,6 @@
 import activeStar from '../../assets/images/activeStar.png'
 import inactiveStar from '../../assets/images/inactiveStar.png'
-import '../../assets/style/secondarycomponentsStyle/rating.scss'
+import './rating.scss'
 
 function Rating({rating, rateRange}) {
 

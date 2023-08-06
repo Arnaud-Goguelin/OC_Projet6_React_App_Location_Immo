@@ -1,4 +1,4 @@
-import '../../assets/style/secondarycomponentsStyle/tags.scss'
+import './tags.scss'
 
 function Tags ({tags}) {
 

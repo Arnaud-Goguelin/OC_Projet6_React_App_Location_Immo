@@ -3,10 +3,12 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/layout'
 import DataProvider from './utils/context'
-import LandingPage from './pages/landingPage'
-import Housing from './pages/housing'
-// import About from './pages/about'
-import Error from './pages/error'
+// import Header from './components/secondaryComponents/header'
+// import Footer from './components/secondaryComponents/footer'
+import LandingPage from './pages/landingPage/landingPage'
+import Housing from './pages/housing/housing'
+import About from './pages/about/about'
+import Error from './pages/error/error'
 
 const root = createRoot(document.getElementById('root'));
 
@@ -16,12 +18,14 @@ root.render(
   <Router>
     <Layout>
     <DataProvider>
-    <Routes>
+      {/* <Header /> */}
+      <Routes>
       <Route path='/' element={<LandingPage />} />
       <Route path='/housing/:id' element={<Housing />} />
-      {/* <Route path='/about' element={<About />} /> */}
+      <Route path='/:about' element={<About />} />
       <Route path='*' element={<Error />} />
-    </Routes>
+      </Routes>
+    {/* <Footer /> */}
     </DataProvider>
     </Layout>
   </Router>

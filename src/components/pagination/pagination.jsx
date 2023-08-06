@@ -1,4 +1,4 @@
-import '../../assets/style/secondarycomponentsStyle/pagination.scss'
+import './pagination.scss'
 
 function Pagination({ currentPage, maxPage, nextPage, previousPage, selectPage }) {
 

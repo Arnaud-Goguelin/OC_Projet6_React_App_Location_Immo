@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
 import { DataContext } from '../../utils/context';
-import Thumb from '../secondaryComponents/thumb'
-import Pagination from '../secondaryComponents/pagination';
-import '../../assets/style/primaryComponentsStyle/housingBackground.scss'
+import Thumb from '../thumbs/thumb'
+import Pagination from '../pagination/pagination';
+import './housingBackground.scss'
 
 function HousingGallery() {
 

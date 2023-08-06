@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import '../../assets/style/secondarycomponentsStyle/thumb.scss'
+import './thumb.scss'
 
 function Thumb({title, cover, id}) {
 

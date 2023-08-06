@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../../assets/style/secondarycomponentsStyle/dropdown.scss'
+import './dropdown.scss'
 
 function Dropdown({dropdownTitle, dropdownContent}) {
 

@@ -1,6 +1,6 @@
-import '../../assets/style/secondarycomponentsStyle/housingIntroduction.scss'
-import Tags from './tags'
-import Rating from './rating'
+import './housingIntroduction.scss'
+import Tags from '../tags/tags'
+import Rating from '../rating/rating'
 
 function Introduction({title, location, tags, host, rating}) {
 

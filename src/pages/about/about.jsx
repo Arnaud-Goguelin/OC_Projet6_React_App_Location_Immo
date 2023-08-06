@@ -1,6 +1,6 @@
-import Dropdown from '../components/secondaryComponents/dropdown'
-import Banner from '../components/secondaryComponents/banner'
-import '../assets/style/secondarycomponentsStyle/about.scss'
+import Dropdown from '../../components/dropdown/dropdown'
+import Banner from '../../components/banner/banner'
+import './about.scss'
 
 function About() {
 

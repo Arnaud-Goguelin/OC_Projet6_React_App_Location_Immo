@@ -1,4 +1,4 @@
-import '../../assets/style/secondarycomponentsStyle/banner.scss'
+import './banner.scss'
 import Cliff from '../../assets/images/cliff.avif'
 import Mountain from '../../assets/images/mountain.avif'
 import { useParams } from 'react-router-dom'

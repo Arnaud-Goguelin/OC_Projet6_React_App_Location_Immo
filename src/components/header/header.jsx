@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
 import Logo from '../../assets/images/logo.png'
-import '../../assets/style/secondarycomponentsStyle/header.scss'
+import './header.scss'
 
 function Header() {
 
@@ -17,6 +17,3 @@ function Header() {
 }
 
 export default Header
-
-// utiliser les navlink pour sauvegarder l'état et avoir une mise en page différente pour le lien sélectionnée
-//https://reactrouter.com/en/main/components/nav-link
