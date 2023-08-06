@@ -9,7 +9,6 @@ import './housing.scss'
 function Housing() {
 
     const { id } = useParams()
-    {console.log(id)}
     const { data, isLoading, error } = useContext(DataContext)
 
     if (error) {

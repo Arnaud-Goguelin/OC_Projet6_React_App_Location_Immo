@@ -12,7 +12,7 @@ function Dropdown({dropdownTitle, dropdownContent}) {
         >
             <summary className='dropdown__header'>
                 <span>{dropdownTitle}</span>
-                <div className={`dropdown__button ${isOpen ? 'open' : 'close'}`}></div>
+                <div key={`${dropdownTitle}`} className={`dropdown__button ${isOpen ? 'open' : 'close'}`}></div>
             </summary>
             <div 
                 className={`dropdown__content ${isOpen ? 'open' : 'close'}`}
