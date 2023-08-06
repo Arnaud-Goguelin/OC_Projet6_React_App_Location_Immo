@@ -5,12 +5,12 @@ function Tags ({tags}) {
     return (
         <div className='Introduction__tagsContainer'>
              {tags.map(tag => 
-                <p 
+                <h2 
                 className='Introduction__tags'
                 key={tags.indexOf(tag)}
                 >
                     {tag}
-                </p>)}
+                </h2>)}
         </div>
 
     )

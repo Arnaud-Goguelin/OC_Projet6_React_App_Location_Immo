@@ -14,29 +14,34 @@ function Pagination({ currentPage, maxPage, nextPage, previousPage, selectPage }
 
     return (
         <ul className="pagination__container">
-            <button 
-                onClick={previousPage} 
-                className='pagination__Button navigatation previous'
-                aria-label='Aller à la page précédente'
-            >
-            </button>
-            {pages.map((page) =>
+            <li>
                 <button 
-                    key={page}
-                    onClick={() => selectPage(page)} 
-                    className={`pagination__Button ${currentPage === page ? 'active' : ''}`} 
-                    aria-pressed={`${currentPage === page ? 'true' : 'false'}`}
-                    aria-label={`Afficher page n°${page}`}
+                    onClick={previousPage} 
+                    className='pagination__Button navigatation previous'
+                    aria-label='Aller à la page précédente'
                 >
-                    {page}
                 </button>
+            </li>
+            {pages.map((page) =>
+                <li key={page}>
+                    <button 
+                        onClick={() => selectPage(page)} 
+                        className={`pagination__Button ${currentPage === page ? 'active' : ''}`} 
+                        aria-pressed={`${currentPage === page ? 'true' : 'false'}`}
+                        aria-label={`Afficher page n°${page}`}
+                    >
+                    {page}
+                    </button>
+                </li>
             )}
-            <button 
-                onClick={nextPage} 
-                className='pagination__Button navigatation next'
-                aria-label='Aller à la page suivante'
-            >
-            </button>
+            <li>
+                <button 
+                    onClick={nextPage} 
+                    className='pagination__Button navigatation next'
+                    aria-label='Aller à la page suivante'
+                >
+                </button>
+            </li>
         </ul>
     )
 

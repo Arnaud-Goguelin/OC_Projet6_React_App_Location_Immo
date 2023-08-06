@@ -6,30 +6,30 @@ function Dropdown({dropdownTitle, dropdownContent}) {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className='dropdown__outfit'>
-            <div className='dropdown__header'>
-                <p className='dropdown__title'>{dropdownTitle}</p>
-                <button 
-                    className={`dropdown__button ${isOpen ? 'open' : 'close'}`}
-                    onClick= {() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
-                >
-                </button>
-            </div>
-            <div className='dropdown__content close'>
+        <details 
+            className='dropdown__outfit'
+            onClick= {() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
+        >
+            <summary className='dropdown__header'>
+                <span>{dropdownTitle}</span>
+                <div className={`dropdown__button ${isOpen ? 'open' : 'close'}`}></div>
+            </summary>
+            <div 
+                className={`dropdown__content ${isOpen ? 'open' : 'close'}`}
+                onClick={(event) => event.target.closest('details').removeAttribute('open')}
+            >
                 {Array.isArray(dropdownContent) ? 
-                        dropdownContent.map(content =>
-                            <ul>
-                                <li 
-                                    key={dropdownContent.indexOf(content)}
-                                >
-                                    {content}
-                                </li>
-                            </ul>
-                        )
-                    : <p>{dropdownContent}</p>    
-                    }
+                    dropdownContent.map(content =>
+                        <ul>
+                            <li key={dropdownContent.indexOf(content)}>
+                            {content}
+                            </li>
+                        </ul>
+                    )
+                : <p>{dropdownContent}</p>
+                }
             </div>
-        </div>
+        </details>
     )
 }
 

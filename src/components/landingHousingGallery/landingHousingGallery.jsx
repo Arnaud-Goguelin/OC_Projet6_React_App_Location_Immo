@@ -35,12 +35,13 @@ function HousingGallery() {
             :       
             (<>
                 {data.slice(limitPerPage*(currentPage - 1), limitPerPage*(currentPage))
-                .map(({id, title, cover}) => (
+                .map(({id, title, cover, location}) => (
                     <Thumb
                     key={id}
                     id={id}
                     title={title}
                     cover ={cover}
+                    location={location}
                     />
                 ))}
                 <Pagination className="pagination"

@@ -1,19 +1,15 @@
 import { Link } from 'react-router-dom'
 import './thumb.scss'
 
-function Thumb({title, cover, id}) {
+function Thumb({title, cover, id, location}) {
 
     return(
-        <>
-        <Link
-        to={`/Housing/${id}`} 
-        className='housingGallery__thumb' 
-        style={{backgroundImage : `url(${cover})`}}
-        >
-            <div className='thumb__overShadow'></div>
-            <p className='thumb__text'>{title}</p>
-        </Link>
-        </>
+        <figure className='housingGallery__thumb' >
+            <Link to={`/Housing/${id}`} >
+                <img className='thumb__image' src={`${cover}`} alt={`${title} - ${location}`}/>
+                <figcaption className='thumb__text'>{title}</figcaption>
+            </Link>
+        </figure>
     )
 }
 

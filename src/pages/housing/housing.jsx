@@ -24,7 +24,7 @@ function Housing() {
                 (<>
                     {data.filter(rental => rental.id === id)
                     .map(({ id, pictures, title, location, tags, host, rating, description, equipments}) =>(
-                        <>
+                        <section>
                             <Carousel 
                                 key={pictures.indexOf()}
                                 pictures={pictures}
@@ -38,18 +38,22 @@ function Housing() {
                                 rating={rating}
                             />
                             <div className='Housing__dropwdownContainer'>
+                                <div>
                                 <Dropdown
                                     key={`${id}-Description`}
                                     dropdownTitle={'Description'}
                                     dropdownContent={description}
                                 />
+                                </div>
+                                <div>
                                 <Dropdown
                                 key={`${id}-Equipements`}
                                     dropdownTitle={'Equipements'}
                                     dropdownContent={equipments}
                                 />
+                                </div>
                             </div>
-                        </>
+                        </section>
                     ))} 
                 </>)
             }

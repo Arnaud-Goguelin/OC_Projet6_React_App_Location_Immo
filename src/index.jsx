@@ -9,6 +9,7 @@ import LandingPage from './pages/landingPage/landingPage'
 import Housing from './pages/housing/housing'
 import About from './pages/about/about'
 import Error from './pages/error/error'
+// import './index.scss'
 
 const root = createRoot(document.getElementById('root'));
 

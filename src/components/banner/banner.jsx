@@ -8,14 +8,14 @@ function Banner() {
     const { about } = useParams()
 
     return(
-        <div className='banner__container'>
+        <figure className='banner__container'>
             <img 
                 className='banner__image'
                 src={about === 'about' ? Mountain : Cliff} 
                 alt={about === 'about' ? 'Image d\'une Montagne' :'Image d\'une falaise' }
             />
-            { about === 'about' ? null : <p>Chez vous, partout et ailleurs</p>}
-        </div>
+            { about === 'about' ? null : <figcaption>Chez vous, partout et ailleurs</figcaption>}
+        </figure>
     )
 }
 

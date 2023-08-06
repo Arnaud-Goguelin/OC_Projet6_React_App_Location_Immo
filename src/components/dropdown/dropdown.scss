@@ -5,6 +5,7 @@
     background-color: #F6F6F6;
     color: #FF6060;
     border-radius: 5px;
+    cursor: pointer;
 
 
     .dropdown__header {
@@ -44,14 +45,6 @@
 
     }
 
-    // .dropdown__content  {
-    //     transition: transform 0.5 ease;
-        
-    //     &.close{
-    //         transform: 
-    //     }
-    // }
-
     .dropdown__content {
         padding: 10px 20px 25px 20px;
 
@@ -62,10 +55,16 @@
                 margin: 0px 0 10px 0;
             }    
         }
-    
-
         > p {
             line-height: 1.5;
         }
+
+        // &.close {
+        //     background-color: green;
+        // }
+
+        // &.open {
+        //     background-color: blue;
+        // }
     }
 }

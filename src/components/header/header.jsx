@@ -5,13 +5,13 @@ import './header.scss'
 function Header() {
 
     return (
-        <div className='header'>
+        <header className='header'>
         <Link to='/'><img src={Logo} alt='Logo de Kasa' /></Link>
         <nav>
             <NavLink className='header__link' to='/'>Accueil</NavLink>
             <NavLink className='header__link' to='/about'>A propos</NavLink>
         </nav>
-        </div>
+        </header>
     )
 
 }

@@ -22,7 +22,7 @@ function Introduction({title, location, tags, host, rating}) {
             <div className='Introduction__container'>
 
                 <div className='Introduction__housingPresentation'>
-                    <p className='Introduction__title'>{title}</p>
+                    <h1 className='Introduction__title'>{title}</h1>
                     <p className='Introduction__location'>{location}</p>
                     
                     <Tags 

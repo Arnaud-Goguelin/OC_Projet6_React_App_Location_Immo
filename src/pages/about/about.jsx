@@ -8,7 +8,7 @@ function About() {
         <>
             <Banner />
 
-        <div className='About__container'>
+        <section className='About__container'>
 
             <Dropdown 
                 key={'About-Fiabilité'}
@@ -23,7 +23,7 @@ function About() {
             <Dropdown 
                 key={'About-Service'}
                 dropdownTitle={'Service'}
-                dropdownContent={'Erreur sur la maquette, le texte pour les dropdowns "Respect" et "Service" est le même'}
+                dropdownContent={'Erreur sur la maquette, les textes pour les dropdowns "Respect" et "Service" sont les mêmes'}
             />
             <Dropdown 
                 key={'About-Sécurité'}
@@ -31,7 +31,7 @@ function About() {
                 dropdownContent={'La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurités établis par nos services. En laissants une note aussi bien à l\'hôte qu\'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectées. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.'}
             />
 
-        </div>
+        </section>
         </>
     )
 }

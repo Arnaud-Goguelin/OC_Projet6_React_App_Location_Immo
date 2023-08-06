@@ -1,45 +1,49 @@
 .pagination__container {
     position: absolute;
-    bottom: 0px;
+    bottom: 30px;
     left:50%;
     transform: translateX(-50%);
-    padding: 0;
     width: 30%;
-    height: 50px;
     color: #FF6060;
     display: flex;
     justify-content: space-evenly;
     align-items:center;
     list-style-type: none;
 
-    .pagination__Button {
-        background: transparent;
-        color:#FF6060;
-        border: none;
-        cursor: pointer;
+    .pagination__container, li {
+        height: 10px;
+        position: relative;
 
-        &.active {
-            color:black;
-        }
+        .pagination__Button {
+            background: transparent;
+            color:#FF6060;
+            border: none;
+            cursor: pointer;
 
-        &.navigatation {
-            width: 10px;
-            height: 10px;
-            border-top: 2px solid #FF6060;
-            border-right: 2px solid #FF6060;
-            border-left: none;
-            border-bottom: none;
+            &.active {
+                color:black;
+            }
+
+            &.navigatation {
+                width: 10px;
+                height: 10px;
+                border-top: 2px solid #FF6060;
+                border-right: 2px solid #FF6060;
 
                 &.previous {
+                    position: absolute;
+                    top: 50%;
                     transform: rotate(225deg);
                 }
     
                 &.next{
+                    position: absolute;
+                    top: 50%;
                     transform: rotate(45deg);
     
                 }
-        }
+            }
     
+        }
     }
-
 }
