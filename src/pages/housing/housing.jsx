@@ -23,7 +23,7 @@ function Housing() {
                 (<>
                     {data.filter(rental => rental.id === id)
                     .map(({ id, pictures, title, location, tags, host, rating, description, equipments}) =>(
-                        <section>
+                        <section key={`${id}-Housing`}>
                             <Carousel 
                                 key={pictures.indexOf()}
                                 pictures={pictures}
