@@ -19,9 +19,9 @@ function Introduction({title, location, tags, host, rating}) {
 
         return(
         <>                  
-            <div className='Introduction__container'>
+            <div className='Housing__introduction'>
 
-                <div className='Introduction__housingPresentation'>
+                <div className='Introduction__rentalPresentation'>
                     <h1 className='Introduction__title'>{title}</h1>
                     <p className='Introduction__location'>{location}</p>
                     
