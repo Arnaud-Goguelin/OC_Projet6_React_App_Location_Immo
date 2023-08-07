@@ -23,7 +23,7 @@ function About() {
             <Dropdown 
                 key={'About-Service'}
                 dropdownTitle={'Service'}
-                dropdownContent={'Erreur sur la maquette, les textes pour les dropdowns "Respect" et "Service" sont les mêmes'}
+                dropdownContent={'Erreur sur la maquette, les textes pour les dropdowns "Respect" et "Service" sont les mêmes.'}
             />
             <Dropdown 
                 key={'About-Sécurité'}
