@@ -7,6 +7,9 @@ function Dropdown({dropdownTitle, dropdownContent}) {
     const [isOpen, setIsOpen] = useState(false)
     const { about } = useParams()
 
+    function isOpenCheck() {
+        isOpen ? setIsOpen(false) : setIsOpen(true)
+    }
 
     return (
         // <details 
@@ -35,8 +38,8 @@ function Dropdown({dropdownTitle, dropdownContent}) {
         // </details>
 
         <div
-            className='dropdown__outfit'
-            onClick= {() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
+            className='dropdown'
+            onClick= {() => isOpenCheck()}
         >
             <div className='dropdown__header'>
                 <h3>{dropdownTitle}</h3>
@@ -44,7 +47,8 @@ function Dropdown({dropdownTitle, dropdownContent}) {
             </div>
             <div 
                 className={`dropdown__content ${isOpen ? 'open' : ''} ${about === 'about' ? 'About' : 'Housing'}`}
-                onClick={(event) => event.target.removeAttribute('open')}
+                onClick={() => isOpenCheck()}
+
             >
                 {Array.isArray(dropdownContent) ? (
                     <ul>

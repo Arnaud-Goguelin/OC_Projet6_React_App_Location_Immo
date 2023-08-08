@@ -13,7 +13,7 @@ function Pagination({ currentPage, maxPage, nextPage, previousPage, selectPage }
     completePages()
 
     return (
-        <ul className="pagination__container">
+        <ul className="pagination">
             <li>
                 <button 
                     onClick={previousPage} 

@@ -1,4 +1,4 @@
-import './carousel.scss'
+import './housingCarousel.scss'
 import { useState, useEffect } from 'react'
 
 function Carousel({pictures}) {
@@ -22,8 +22,7 @@ function Carousel({pictures}) {
 
     return(
         <div 
-            className="Housing__carousel" 
-            // style={{backgroundImage : `url(${pictures[currentPictureIndex]})`}}
+            className="carousel" 
         >
             <img src={pictures[currentPictureIndex]} alt="" />
             <div 

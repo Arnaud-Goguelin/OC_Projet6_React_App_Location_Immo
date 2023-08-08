@@ -1,31 +1,4 @@
-@mixin content-styles($height) {
-    color: #FF6060;
-    width: auto ;
-    padding: 0px 20px;
-    height: 0px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    transition: height 500ms ease-in;
-
-    > ul {
-        list-style-type: none;
-        
-        > li {
-            margin: 0px 0 10px 0;
-        }    
-    }
-
-    > p {
-        line-height: 1.5;
-    }
-
-    &.open {
-        height: $height;
-    }
-}
-
-.dropdown__outfit {
+.dropdown {
     margin: 25px 0;
     display: flex;
     flex-direction: column;
@@ -33,7 +6,7 @@
     background-color: #F6F6F6;
     border-radius: 5px;
 
-    .dropdown__header {
+    &__header {
         height: 25px;
         padding: 10px 20px 10px 10px;
         border-radius: 5px;
@@ -65,15 +38,30 @@
 
     }
 
-    .dropdown__content {
-        @include content-styles(0);
-
-        &.Housing {
-            @include content-styles(200px);
+    &__content {
+        color: #FF6060;
+        width: auto ;
+        padding: 0px 20px;
+        height: 0px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        transition: height 500ms ease-in;
+    
+        > ul {
+            list-style-type: none;
+            
+            > li {
+                margin: 0px 0 10px 0;
+            }    
         }
     
-        &.About {
-            @include content-styles(150px);
+        > p {
+            line-height: 1.5;
+        }
+    
+        &.open {
+            height: 200px;
         }
     }
 }

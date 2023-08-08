@@ -1,8 +1,8 @@
-.pagination__container {
+.pagination {
     position: absolute;
     bottom: 30px;
-    left:50%;
-    transform: translateX(-50%);
+    //positionné au milieu de la page moins la moitié de la largeur de l'élément
+    left:calc(50% - (--pagination-width) / 2);
     width: 30%;
     color: #FF6060;
     display: flex;
@@ -10,7 +10,7 @@
     align-items:center;
     list-style-type: none;
 
-    .pagination__container, li {
+    > li {
         height: 10px;
         position: relative;
 

@@ -4,8 +4,12 @@
     border-radius: 20px;
     position: relative;
     background-color: rgba(0,0,0,0.3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        .banner__image {
+        img {
             height: 100%;
             width: 100%;
             object-fit:cover;
@@ -16,9 +20,8 @@
         .banner__container, figcaption {
             position: absolute;
             font-size: 3em;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             color : white;
+            display: flex;
+            text-align: center;
         }
 }

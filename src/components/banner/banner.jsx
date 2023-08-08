@@ -6,11 +6,11 @@ import { useParams } from 'react-router-dom'
 function Banner() {
 
     const { about } = useParams()
+    {console.log(about)}
 
     return(
         <figure className='banner__container'>
-            <img 
-                className='banner__image'
+            <img
                 src={about === 'about' ? Mountain : Cliff} 
                 alt={about === 'about' ? 'Image d\'une Montagne' :'Image d\'une falaise' }
             />
@@ -19,7 +19,4 @@ function Banner() {
     )
 }
 
-export default Banner
-
-// inclure la photo dans une <img> ce qui permettra de changer d'image en fonction de la page choisie (accueil ou about)
-// permet d'ajouter le filtre sur l'image   
+export default Banner 
