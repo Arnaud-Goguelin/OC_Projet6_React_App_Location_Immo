@@ -22,9 +22,10 @@ function Carousel({pictures}) {
 
     return(
         <div 
-            className="carousel__background" 
-            style={{backgroundImage : `url(${pictures[currentPictureIndex]})`}}
+            className="Housing__carousel" 
+            // style={{backgroundImage : `url(${pictures[currentPictureIndex]})`}}
         >
+            <img src={pictures[currentPictureIndex]} alt="" />
             <div 
                 className={pictures.length === 1 ? "inactive" :"carousel__buttonContainer"}
             >

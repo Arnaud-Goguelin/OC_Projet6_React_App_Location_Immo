@@ -1,27 +1,37 @@
-.carousel__background {
-    padding : 30px 30px 20px 30px;
+.Housing__carousel {
     margin: 25px 0;
     height: 400px;
-    border-radius: 25px;
-    background-size: cover;
-    background-position: center;
+    // border-radius: 25px;
+    // background-size: cover;
+    // background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // animation: carouselTransitions 2s linear infinite;
+    position: relative;
+
+    > img {
+        position: absolute;
+        border-radius: 25px;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
 
     .carousel__buttonContainer {
-        width: 100%;
+        position: absolute;
+        width: 95%;
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 2;
 
         .carousel__navigateButton {
             background: transparent;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-top: 5px solid white;
             border-right: 5px solid white;
             border-left: none;
@@ -33,19 +43,18 @@
 
                 &.next{
                     transform: rotate(45deg);
-
                 }
         }
-
-
     }
 
     .carousel__imageCounter {
+        position: absolute;
+        bottom: 10px;
         color: white;
+        z-index: 2;
     }
 
     .inactive {
         display: none;
     }
-
 }
