@@ -6,7 +6,7 @@ function Error() {
         <div className='errorPage'>
             <p>404</p>
             <p>Oups! La page que vous demandez n'existe pas</p>
-            <Link to='/'>Retourner sur la page d'accueil</Link>
+            <Link to='/' aria-Label={`Aller à la page d\'accueil`}>Retourner sur la page d'accueil</Link>
         </div>
     )
 }

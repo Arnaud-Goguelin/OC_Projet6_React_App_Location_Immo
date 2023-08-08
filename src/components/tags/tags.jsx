@@ -7,6 +7,7 @@ function Tags ({tags}) {
              {tags.map(tag => 
                 <strong 
                 className='Introduction__tags'
+                aria-label='mot clef'
                 key={tags.indexOf(tag)}
                 >
                     {tag}

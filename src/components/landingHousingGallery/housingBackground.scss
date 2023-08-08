@@ -5,6 +5,13 @@
     border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
     position: relative;
+}
+
+.pagination {
+    position: absolute;
+    bottom: 30px;
+    width: 20%;
+    //positionné au milieu de la page moins la moitié de la largeur de l'élément
+    left:calc(50% - 10%);
 }

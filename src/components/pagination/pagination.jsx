@@ -1,16 +1,6 @@
 import './pagination.scss'
 
-function Pagination({ currentPage, maxPage, nextPage, previousPage, selectPage }) {
-
-    let pages=[]
-
-    function completePages() {
-        for (let p = 1; p <= maxPage; p++) {
-            pages.push(p)
-        }
-    }
-
-    completePages()
+function Pagination({ pages, currentPage, nextPage, previousPage, selectPage }) {
 
     return (
         <ul className="pagination">
@@ -28,7 +18,7 @@ function Pagination({ currentPage, maxPage, nextPage, previousPage, selectPage }
                         onClick={() => selectPage(page)} 
                         className={`pagination__Button ${currentPage === page ? 'active' : ''}`} 
                         aria-pressed={`${currentPage === page ? 'true' : 'false'}`}
-                        aria-label={`Afficher page n°${page}`}
+                        aria-label={`Afficher la page n°${page}`}
                     >
                     {page}
                     </button>

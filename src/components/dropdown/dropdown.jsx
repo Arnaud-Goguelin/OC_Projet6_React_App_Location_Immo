@@ -1,41 +1,17 @@
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
 import './dropdown.scss'
 
 function Dropdown({dropdownTitle, dropdownContent}) {
 
     const [isOpen, setIsOpen] = useState(false)
-    const { about } = useParams()
 
     function isOpenCheck() {
         isOpen ? setIsOpen(false) : setIsOpen(true)
     }
 
     return (
-        // <details 
-        // className={`dropdown__outfit ${isOpen ? 'open' : ''}`}
-        //     onClick= {() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
-        // >
-        //     <summary>
-        //         <span>{dropdownTitle}</span>
-        //         <div className={`dropdown__button ${isOpen ? 'open' : 'close'}`}></div>
-        //     </summary>
-        //     <div 
-        //         className={`dropdown__content ${isOpen ? 'open' : ''}`}
-        //         onClick={(event) => event.target.closest('details').removeAttribute('open')}
-        //     >
-        //         {Array.isArray(dropdownContent) ? (
-        //             <ul>
-        //                 {dropdownContent.map((content, index) =>
-        //                     (<li key={index}>
-        //                         {content}
-        //                     </li>))
-        //                 }
-        //             </ul>)
-        //         : (<p>{dropdownContent}</p>)
-        //         }
-        //     </div>
-        // </details>
+        // les balises détails et summary semblent tout indiquées pour créer les dropdowns, toutefois leur mise en forme (notamment l'animation de l'apparaition du texte sous le titre), 
+        // est à gérer avec du code complexe en JS à priori, et pas en SCSS. Ceci rendrait trop complexe le code de Kasa.
 
         <div
             className='dropdown'
@@ -43,15 +19,20 @@ function Dropdown({dropdownTitle, dropdownContent}) {
         >
             <div className='dropdown__header'>
                 <h3>{dropdownTitle}</h3>
-                <button className={`dropdown__button ${isOpen ? 'open' : 'close'}`}></button>
+                <button 
+                    className={`dropdown__button ${isOpen ? 'open' : 'close'}`} 
+                    aria-label={isOpen ? `Fermer le détails de l'encart ${dropdownTitle}` : `Ouvrir le détails de l'encart ${dropdownTitle}`}
+                >
+                </button>
             </div>
             <div 
-                className={`dropdown__content ${isOpen ? 'open' : ''} ${about === 'about' ? 'About' : 'Housing'}`}
+                className={`dropdown__content ${isOpen ? 'open' : ''}`}
                 onClick={() => isOpenCheck()}
-
             >
                 {Array.isArray(dropdownContent) ? (
-                    <ul>
+                    <ul
+                    aria-label={`liste des ${dropdownTitle}`}
+                    >
                         {dropdownContent.map((content, index) =>
                             (<li key={index}>
                                 {content}
@@ -63,6 +44,8 @@ function Dropdown({dropdownTitle, dropdownContent}) {
             </div>
         </div>
     )
+
+    // passer l'url de la page en props plutôt que useParams
 }
 
 export default Dropdown

@@ -4,7 +4,7 @@ import useFetch from './useFetch'
 export const DataContext = createContext()
 
 
-function DataProvider({ children }) {
+function DataProvider({children}) {
 
   const { data, isLoading, error } = useFetch('http://localhost:3000/housing.json');
 
@@ -16,3 +16,5 @@ function DataProvider({ children }) {
 }
 
 export default DataProvider;
+
+//pourquoi créer un composant pour passer les données alors que je peux les passer en props?

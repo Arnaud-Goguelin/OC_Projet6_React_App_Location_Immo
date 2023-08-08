@@ -5,6 +5,7 @@ import Rating from '../rating/rating'
 function Introduction({title, location, tags, host, rating}) {
 
     //Gestion du nombre d'étoiles à afficher, il suffit de modifier maxRate pour cela.
+    //rateRange est un tableau que l'on complète avec la fonction completeRateRange, permettant une itération dessus et la génération des étoiles de manière dynamique.
     const maxRate = 5
     let rateRange = []
 
@@ -23,7 +24,7 @@ function Introduction({title, location, tags, host, rating}) {
 
                 <div className='Introduction__rentalPresentation'>
                     <h1 className='Introduction__title'>{title}</h1>
-                    <p className='Introduction__location'>{location}</p>
+                    <h2 className='Introduction__location'>{location}</h2>
                     
                     <Tags 
                         key={tags.indexOf()}

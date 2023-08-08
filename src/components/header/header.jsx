@@ -6,10 +6,10 @@ function Header() {
 
     return (
         <header className='header'>
-        <Link to='/'><img src={Logo} alt='Logo de Kasa' /></Link>
+        <Link to='/'><img src={Logo} alt='Logo de Kasa' aria-label={`Aller à la page d\'accueil`}/></Link>
         <nav>
-            <NavLink className='header__link' to='/'>Accueil</NavLink>
-            <NavLink className='header__link' to='/about'>A propos</NavLink>
+            <NavLink className='header__link' to='/' aria-label={`Aller à la page d\'accueil`}>Accueil</NavLink>
+            <NavLink className='header__link' to='/about' aria-label={`Aller à la page "A propos"`}>A propos</NavLink>
         </nav>
         </header>
     )

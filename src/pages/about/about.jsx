@@ -1,12 +1,18 @@
 import Dropdown from '../../components/dropdown/dropdown'
 import Banner from '../../components/banner/banner'
 import './about.scss'
+import Mountain from '../../assets/images/mountain.avif'
+
 
 function About() {
 
     return(
         <>
-            <Banner />
+            <Banner 
+                image={Mountain}
+                alt={'Image d\'une chaîne de montagne'}
+                text={''}
+            />
 
         <section className='About__container'>
 

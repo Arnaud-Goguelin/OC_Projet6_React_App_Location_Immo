@@ -22,27 +22,29 @@ function Carousel({pictures}) {
 
     return(
         <div 
-            className="carousel" 
+            className='carousel' 
         >
-            <img src={pictures[currentPictureIndex]} alt="" />
+            <img src={pictures[currentPictureIndex]} alt={`Image défilante n°${currentPictureIndex} présentant la location`} />
             <div 
-                className={pictures.length === 1 ? "inactive" :"carousel__buttonContainer"}
+                className={pictures.length === 1 ? 'inactive' :'carousel__buttonContainer'}
             >
                 <button 
                     onClick={previousPictureIndex} 
-                    className="carousel__navigateButton previous"
+                    className='carousel__navigateButton previous'
+                    aria-label={`Afficher l\'image précédente`}
                 >
                 </button>
                 <button 
                     onClick={nextPictureIndex} 
-                    className="carousel__navigateButton next"
+                    className='carousel__navigateButton next'
+                    aria-label={`Afficher l\'image suivante`}
                 >
                 </button>
             </div>
             <p 
                 className={pictures.length === 1 ? "inactive" : "carousel__imageCounter"}
             >
-                {currentPictureIndex + 1}/{pictures.length}
+                {currentPictureIndex + 1} / {pictures.length} pages
             </p>
         </div>
     )
