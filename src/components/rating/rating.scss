@@ -1,8 +1,13 @@
 .Introduction__notationContainer{
     margin: 20px 0 0 0;
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: end;
+
+    @media (max-width: 375px) {
+        margin:auto 0;
+        width: 30%;
+    }
 
     .Introduction__notationStar {
         width: 15px;

@@ -9,11 +9,21 @@
     > :first-child {
         font-size: 18em;
         font-weight: 700;
+
+        @media (max-width: 375px) {
+                font-size: 6em;
+            }
     }
 
     > :nth-child(2n+0) {
         font-size: 2em;
         font-weight: 500; 
+
+        @media (max-width: 375px) {
+                width: 70%;
+                text-align: center;
+                font-size: 1em;
+        }
     }
 
     > a, a:visited {
@@ -25,9 +35,7 @@
 }
 
     @media (max-width: 375px) {
-        .errorPage > :first-child {
-            font-size: 6em;
-        }
+
 
         .errorPage > :nth-child(2n+0) {
             width: 70%;

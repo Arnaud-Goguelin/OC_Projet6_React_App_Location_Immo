@@ -1,12 +1,19 @@
 .header {
+    font-family: 'Montserrat';
+
     max-width: 1240px;
     margin: 50px auto 25px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 375px) {
+        width: 90%;
+        margin: 25px auto;
+    }
+
     img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
     }
 
@@ -20,22 +27,19 @@
             &.active {
                 text-decoration: underline;
             }
+
+            @media (max-width: 375px) {
+                font-size: 1em;
+                margin: 0 0 0 15px;
+                text-transform: uppercase;
+            }
     } 
 
 @media (max-width: 375px) {
 
-        width: 90%;
-        margin: 25px auto;
-
         &__logo {
             width: 40%;
         }
-
-
-        // img {
-        //     max-width: 90%;
-        //     height: auto;
-        // }
 
         nav {
             width: 60%;
@@ -43,12 +47,8 @@
             justify-content: end;
         }
 
-        &__link {
-            font-size: 1em;
-            margin: 0 0 0 15px;
-            text-transform: uppercase;
-        }
-    }
+}
+
 }
 
 

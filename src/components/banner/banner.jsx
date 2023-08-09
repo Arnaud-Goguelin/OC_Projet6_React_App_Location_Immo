@@ -8,7 +8,7 @@ function Banner({image, alt, text}) {
                 src={image} 
                 alt={alt}
             />
-            <figcaption>{text}</figcaption>
+            <p>{text}</p>
         </figure>
     )
 }

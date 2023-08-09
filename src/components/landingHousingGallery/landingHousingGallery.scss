@@ -7,16 +7,31 @@
     flex-wrap: wrap;
     justify-content: start;
     position: relative;
-
-    > :nth-last-child(-n+2) {
-        margin: 25px;
-    }
+    
+        @media (max-width: 375px) {
+            justify-content: center;
+            background-color: transparent;
+            margin: 0;
+            padding: 0 0 50px 0;
+        }
+        //Attention, ici, le media querie concerne le format desktop
+        @media (min-width: 376px) {
+            > :nth-last-child(-n+2) {
+                margin: 25px;
+            }
+        }
 }
 
 .pagination {
     position: absolute;
     bottom: 30px;
-    width: 20%;
-    //positionné au milieu de la page moins la moitié de la largeur de l'élément
-    left:calc(50% - 10%);
+    width: 70%;
+
+    //Attention, ici, le media querie concerne le format desktop
+    @media (min-width: 376px) {
+        width: 20%;
+        //positionné au milieu de la page moins la moitié de la largeur de l'élément
+        left: calc(50% - 10%);
+    }
+    
 }

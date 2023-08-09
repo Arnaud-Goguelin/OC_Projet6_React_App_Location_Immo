@@ -5,6 +5,11 @@
     align-items:center;
     list-style-type: none;
 
+    @media (max-width: 375px) {
+        justify-content: space-around;
+    }
+
+
     > li {
         height: 10px;
         position: relative;
@@ -35,10 +40,8 @@
                     position: absolute;
                     top: 50%;
                     transform: rotate(45deg);
-    
                 }
             }
-    
         }
     }
 }

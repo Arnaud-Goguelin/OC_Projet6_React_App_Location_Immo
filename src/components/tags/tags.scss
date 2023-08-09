@@ -9,5 +9,12 @@
         background-color: #FF6060;
         color: white;
         text-align: center;
+        align-self: center;
+        font-size: 1em;
+
+        @media (max-width: 375px) {
+            padding: 5px 4px;
+            font-size: 0.8em;
+        }
     }
 }

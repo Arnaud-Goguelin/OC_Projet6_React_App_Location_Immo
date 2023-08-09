@@ -10,7 +10,7 @@ function LandingPage() {
             <Banner 
                 image={Cliff}
                 alt={'Image d\'une falaise'}
-                text={'Chez vous, partout et ailleurs'}
+                text={'Chez vous,\n partout et ailleurs'}
             />
             <HousingGallery />
         </>
