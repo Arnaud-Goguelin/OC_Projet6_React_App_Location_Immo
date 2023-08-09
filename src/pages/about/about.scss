@@ -1,4 +1,9 @@
 .About__container {
         width: 82.5%;
         margin: auto;
+
+        @media (max-width: 375px) {
+                width: 100%;
+   
+        }
 }

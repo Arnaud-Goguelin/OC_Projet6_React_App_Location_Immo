@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { DataContext } from '../../utils/context';
 import Thumb from '../thumbs/thumb'
 import Pagination from '../pagination/pagination';
-import './housingBackground.scss'
+import './landingHousingGallery.scss'
 
 function HousingGallery() {
 

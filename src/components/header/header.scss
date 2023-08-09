@@ -5,17 +5,52 @@
     justify-content: space-between;
     align-items: center;
 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     &__link {
         margin: 0 0 0 55px;
         color:#FF6060;
         text-decoration: none;
+        font-size: 1.5em;
+        font-weight: 500;
         
             &.active {
                 text-decoration: underline;
             }
-        
+    } 
+
+@media (max-width: 375px) {
+
+        width: 90%;
+        margin: 25px auto;
+
+        &__logo {
+            width: 40%;
         }
+
+
+        // img {
+        //     max-width: 90%;
+        //     height: auto;
+        // }
+
+        nav {
+            width: 60%;
+            display: flex;
+            justify-content: end;
+        }
+
+        &__link {
+            font-size: 1em;
+            margin: 0 0 0 15px;
+            text-transform: uppercase;
+        }
+    }
 }
+
 
 
 

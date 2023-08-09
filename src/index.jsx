@@ -37,6 +37,7 @@ root.render (
 // TO DO:
 // terminer la mise en page
 // terminer la gestion des erreurs
+// comment régler la hauteur du dropdown en fonction du texte afficher en préservant l'animation?
 
 // Utilisation des données dans:
 //  landingHousingGallery

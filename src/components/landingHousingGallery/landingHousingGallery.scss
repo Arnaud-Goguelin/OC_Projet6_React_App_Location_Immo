@@ -5,7 +5,12 @@
     border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: start;
     position: relative;
+
+    > :nth-last-child(-n+2) {
+        margin: 25px;
+    }
 }
 
 .pagination {

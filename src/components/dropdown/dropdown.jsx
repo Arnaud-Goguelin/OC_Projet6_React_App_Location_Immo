@@ -5,17 +5,13 @@ function Dropdown({dropdownTitle, dropdownContent}) {
 
     const [isOpen, setIsOpen] = useState(false)
 
-    function isOpenCheck() {
-        isOpen ? setIsOpen(false) : setIsOpen(true)
-    }
-
     return (
         // les balises détails et summary semblent tout indiquées pour créer les dropdowns, toutefois leur mise en forme (notamment l'animation de l'apparaition du texte sous le titre), 
         // est à gérer avec du code complexe en JS à priori, et pas en SCSS. Ceci rendrait trop complexe le code de Kasa.
 
         <div
             className='dropdown'
-            onClick= {() => isOpenCheck()}
+            onClick= {() => setIsOpen(!isOpen)}
         >
             <div className='dropdown__header'>
                 <h3>{dropdownTitle}</h3>
@@ -25,10 +21,7 @@ function Dropdown({dropdownTitle, dropdownContent}) {
                 >
                 </button>
             </div>
-            <div 
-                className={`dropdown__content ${isOpen ? 'open' : ''}`}
-                onClick={() => isOpenCheck()}
-            >
+            <div className={`dropdown__content ${isOpen ? 'open' : ''}`}>
                 {Array.isArray(dropdownContent) ? (
                     <ul
                     aria-label={`liste des ${dropdownTitle}`}
@@ -44,8 +37,6 @@ function Dropdown({dropdownTitle, dropdownContent}) {
             </div>
         </div>
     )
-
-    // passer l'url de la page en props plutôt que useParams
 }
 
 export default Dropdown
