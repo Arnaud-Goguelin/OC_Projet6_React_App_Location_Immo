@@ -58,16 +58,17 @@
             list-style-type: none;
             
             > li {
-                margin: 0px 0 10px 0;
+                margin: 10px 0;
             }    
         }
     
         > p {
+            padding: 10px 0px;
             line-height: 1.5;
         }
     
-        &.open {
-            height: 200px;
-        }
+        // &.open {
+        //     padding: 10px 20px;
+        //     }
     }
 }
