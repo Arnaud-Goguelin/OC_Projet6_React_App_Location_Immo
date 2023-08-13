@@ -12,6 +12,10 @@
         font-size: 18em;
         font-weight: 700;
 
+        @media (max-width: $medium-screen) {
+            font-size: 10em;
+        }
+
         @media (max-width: $small-screen) {
                 font-size: 6em;
             }
@@ -21,9 +25,13 @@
         font-size: 2em;
         font-weight: 500; 
 
+        @media (max-width: $medium-screen) {
+            width: 70%;
+            text-align: center;
+            font-size: 1.5em;
+    }
+
         @media (max-width: $small-screen) {
-                width: 70%;
-                text-align: center;
                 font-size: 1em;
         }
     }
@@ -35,15 +43,3 @@
         color:$primary-color;
     }
 }
-
-    @media (max-width: $small-screen) {
-
-
-        .errorPage > :nth-child(2n+0) {
-            width: 70%;
-            text-align: center;
-            font-size: 1em;
-        }
-    }
-
-

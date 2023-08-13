@@ -57,7 +57,7 @@ $secondary-color: white;
 $small-screen : 640px;
 $medium-screen : 768px;
 $large-screen : 1024px;
-$extraLarge-screen : 1280px;
+$extraLarge-screen : 1240px;
 
 $primary-font-family : 'Montserrat';
 
@@ -68,7 +68,7 @@ $primary-font-family : 'Montserrat';
 	font-weight: 300;
 	font-size: 1em;
 
-	@media (max-width: $small-screen) {
-		max-width: 90%;
+	@media (max-width: $extraLarge-screen) {
+		width: 90%;
 	}	
 }

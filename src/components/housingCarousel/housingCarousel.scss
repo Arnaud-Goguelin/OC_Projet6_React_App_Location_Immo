@@ -9,9 +9,18 @@
     align-items: center;
     position: relative;
 
-    @media (max-width: $small-screen) {
-        width: auto;
-        height: 225px;
+        @media (max-width: $large-screen) {
+            width: auto;
+            height: 350px;
+    }
+
+        @media (max-width: $medium-screen) {
+            width: auto;
+            height: 300px;
+    }
+
+        @media (max-width: $small-screen) {
+            height: 225px;
     }
 
     > img {
@@ -64,7 +73,7 @@
         bottom: 10px;
         color: $secondary-color;
         
-        @media (max-width: $small-screen) {
+        @media (max-width: $medium-screen) {
             display: none;
         }
     }

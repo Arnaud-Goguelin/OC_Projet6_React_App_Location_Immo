@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     
-    @media (max-width: $small-screen) {
+    @media (max-width: $medium-screen) {
         flex-direction: column;
         margin: 0 0 30px 0;
     }
@@ -12,7 +12,7 @@
     > div {
         width: 47%;
 
-        @media (max-width: $small-screen) {
+        @media (max-width: $medium-screen) {
             width: 100%;
         }
     }

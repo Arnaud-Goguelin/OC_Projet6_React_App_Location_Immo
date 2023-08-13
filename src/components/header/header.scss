@@ -2,14 +2,13 @@
 
 .header {
     font-family: $primary-font-family;
-
     max-width: 1240px;
     margin: 50px auto 25px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: $small-screen) {
+    @media (max-width: $extraLarge-screen) {
         width: 90%;
         margin: 25px auto;
     }
@@ -32,15 +31,15 @@
 
             @media (max-width: $small-screen) {
                 font-size: 1em;
-                margin: 0 0 0 15px;
+                margin: 0 0 0 20px;
                 text-transform: uppercase;
             }
     } 
 
-@media (max-width: $small-screen) {
+    @media (max-width: $small-screen) {
 
         &__logo {
-            width: 40%;
+            width: 30%;
         }
 
         nav {
@@ -48,9 +47,7 @@
             display: flex;
             justify-content: end;
         }
-
-}
-
+    }
 }
 
 

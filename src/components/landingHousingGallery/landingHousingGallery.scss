@@ -11,18 +11,32 @@
     position: relative;
     --screenWidth: desktop;
     
-        @media (max-width: $small-screen) {
-            justify-content: center;
-            background-color: transparent;
-            margin: 0;
-            padding: 0 0 50px 0;
-            --screenWidth: mobile;
-        }
-        //Attention, ici, le media querie concerne le format desktop
-        @media (min-width: 641px) {
+    //Attention, ici, le media querie concerne le format desktop
+         @media (min-width: calc($extraLarge-screen + 1px)) {
             > :nth-last-child(-n+2) {
                 margin: 25px;
             }
+        }
+
+        @media (max-width: calc($extraLarge-screen - 1px)) {
+            justify-content: center;
+            padding: 30px 10px;
+        }
+
+        @media (max-width: $large-screen) {
+            padding: 30px 25px;
+        }
+
+        @media (max-width: $medium-screen) {
+            justify-content: center;
+            background-color: transparent;
+            margin: 20px auto;
+            padding: 0 0 50px 0;
+            --screenWidth: mobile;
+        }
+
+        @media (max-width: $small-screen) {
+            margin: 0;
         }
 }
 
@@ -32,10 +46,10 @@
     width: 70%;
 
     //Attention, ici, le media querie concerne le format desktop
-    @media (min-width: (641px)) {
-        width: 20%;
+    @media (min-width: ($medium-screen +1)) {
+        width: 40%;
         //positionné au milieu de la page moins la moitié de la largeur de l'élément
-        left: calc(50% - 10%);
+        left: calc(50% - 20%);
     }
     
 }
