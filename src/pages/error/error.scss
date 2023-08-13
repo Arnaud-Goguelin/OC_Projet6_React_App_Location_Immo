@@ -1,10 +1,12 @@
+@import '../../index.scss';
+
 .errorPage {
     height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    color:#FF6060;
+    color:$primary-color;
 
     > :first-child {
         font-size: 18em;
@@ -30,7 +32,7 @@
         font-size: 1em;
         text-decoration: none;
         text-decoration-line: underline; 
-        color:#FF6060;
+        color:$primary-color;
     }
 }
 

@@ -1,5 +1,7 @@
+@import '../../index.scss';
+
 .header {
-    font-family: 'Montserrat';
+    font-family: $primary-font-family;
 
     max-width: 1240px;
     margin: 50px auto 25px auto;
@@ -19,7 +21,7 @@
 
     &__link {
         margin: 0 0 0 55px;
-        color:#FF6060;
+        color:$primary-color;
         text-decoration: none;
         font-size: 1.5em;
         font-weight: 500;

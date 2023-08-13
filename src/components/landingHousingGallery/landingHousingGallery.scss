@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .housingBackground {
     margin: 25px auto;
     padding: 50px 35px;
@@ -7,15 +9,17 @@
     flex-wrap: wrap;
     justify-content: start;
     position: relative;
+    --screenWidth: desktop;
     
-        @media (max-width: 375px) {
+        @media (max-width: $small-screen) {
             justify-content: center;
             background-color: transparent;
             margin: 0;
             padding: 0 0 50px 0;
+            --screenWidth: mobile;
         }
         //Attention, ici, le media querie concerne le format desktop
-        @media (min-width: 376px) {
+        @media (min-width: 641px) {
             > :nth-last-child(-n+2) {
                 margin: 25px;
             }
@@ -28,7 +32,7 @@
     width: 70%;
 
     //Attention, ici, le media querie concerne le format desktop
-    @media (min-width: 376px) {
+    @media (min-width: ($small-screen +1)) {
         width: 20%;
         //positionné au milieu de la page moins la moitié de la largeur de l'élément
         left: calc(50% - 10%);

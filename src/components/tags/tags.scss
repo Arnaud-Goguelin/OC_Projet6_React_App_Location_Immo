@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .Introduction__tagsContainer {
     display: flex;
 
@@ -6,8 +8,8 @@
         width: auto;
         padding: 5px 40px;
         border-radius: 10px;
-        background-color: #FF6060;
-        color: white;
+        background-color: $primary-color;
+        color: $secondary-color;
         text-align: center;
         align-self: center;
         font-size: 1em;

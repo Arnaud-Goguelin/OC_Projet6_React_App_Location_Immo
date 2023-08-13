@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useRef, useEffect } from 'react';
 import { DataContext } from '../../utils/context';
 import Thumb from '../thumbs/thumb'
 import Pagination from '../pagination/pagination';
@@ -8,37 +8,62 @@ function HousingGallery() {
 
     const { data, isLoading, error } = useContext(DataContext)
 
-    //Gestion de la pagination, il suffit de modifier limitPerPage (nb d'éléments affichés par page) 
-    //pour changer le nombre de page et les boutons de navigations associés.
+    // Gestion de la pagination, il suffit de modifier les valeurs de limitPerPage (nb d'éléments affichés par page), 
+    // dans la fonction defineLimitePerPage ,pour changer le nombre de page et les boutons de navigations associés.
     // La page en cours "currentPage" est initié à 1 pour éviter la page 0.
-    const limitPerPage = 6
+    // limitPerPage est initiée à 1 pour éviter un boucle infine (division par limitPerPage dans defineMaxPage)
     const [ currentPage, setPage ] = useState(1)
-    
+    const [ limitPerPage, setLimit ] = useState(1)
+    const housingBackgroundRef = useRef(null)
     let maxPage = null
+    let pages=[]
+
+
+    // La limite d'éléments à afficher par page est définit selon les medias queries (on récupère la valeur d'une variable CSS définit par nos soins).
+    // A savoir pour les tests: sa bonne prise en compte nécessite un rechargement de la page, 
+    // mais ce n'est pas gênant pour un utilisateur qui ne changera pas sa taille d'écran en cours d'utilisation.
+    
+    function defineLimitePerPage() {
+        if (housingBackgroundRef.current != null) {
+            const housingBackground =  getComputedStyle(housingBackgroundRef.current);
+            const screenWidth = housingBackground.getPropertyValue('--screenWidth');
+            screenWidth === 'desktop' ? setLimit(6) : setLimit(3);
+        }
+    }
+     
+    // Le nombre maximum de page est définit en divisant l'arrondi supérieur de la longueur de data divisé par la limite d'élément à afficher par page.
     function defineMaxPage() {
-        isLoading? maxPage=null : maxPage = Math.ceil(data.length / limitPerPage)}
-    defineMaxPage()
+        isLoading ? maxPage = null : maxPage = Math.ceil(data.length / limitPerPage)}
 
     // Créer un tableau pages permet d'itérer dessus pour générer automatiquement les boutons de la pagination.
     // Le nombre de page nécessaires est définit en fonction du nombre d'objet à afficher et du nombre d'objets maximum à afficher par page.
-    let pages=[]
     function completePages() {
         for (let p = 1; p <= maxPage; p++) {pages.push(p)}}
-    completePages()
 
-    //Gestion de la navigation dans la pagination
+    // Gestion de la navigation dans la pagination
     function previousPage() {currentPage === 1 ? setPage(maxPage) : setPage(currentPage - 1)}
     function selectPage(p) {setPage(p)}
     function nextPage() {currentPage === maxPage ? setPage(1) : setPage(currentPage + 1)}
+
+    // Appel des fonctions pour générer la pagination, puis l'affichage des composants.
+    // On utilise useEffect pour n'appeler defineLimitePerPage qu'une fois, au 1er rendu du composant.
+    useEffect(() => {    
+        defineLimitePerPage();
+    },[])
+    // defineMaxPage est appelé en dehors du useEffect pour qu'il prennent la valeur à jour de limitPerPage (et non pas 1)
+    defineMaxPage();
+    completePages();
 
     if (error) {
         return <span>Il y a eu un problème: {error}</span>
       }
 
-    return(
-        <section className='housingBackground' >
-            { isLoading ? 
-            (<span>Patientez, chargement des données</span>)
+      return(
+        // la balise section est générée en dehors de toutes conditions, 
+        // pour que housingBackgroundRef soit différent de null est permettre la bonne génération de la pagination, 
+        // et donc de reste des composants.
+        <section className='housingBackground' ref={housingBackgroundRef}>
+            { isLoading ? (<span>Patientez, chargement des données</span>)
             :       
             (<>
                 <Pagination 

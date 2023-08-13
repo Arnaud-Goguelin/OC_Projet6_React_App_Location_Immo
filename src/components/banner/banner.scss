@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 .banner__container {
     margin: 25px auto 50px auto;
     height: 200px;
@@ -27,7 +29,7 @@
             position: absolute;
             font-size: 3em;
             font-weight: 500;
-            color : white;
+            color : $secondary-color;
             display: flex;
             text-align: center;
 
