@@ -6,9 +6,9 @@
     display: flex;
     justify-content: end;
 
-    @media (max-width: 375px) {
+    @media (max-width: $small-screen) {
         margin:auto 0;
-        width: 30%;
+        justify-content: start;
     }
 
     .Introduction__notationStar {

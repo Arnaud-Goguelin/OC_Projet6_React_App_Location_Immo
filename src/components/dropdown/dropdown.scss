@@ -8,7 +8,7 @@
     background-color: #F6F6F6;
     border-radius: 10px;
 
-    @media (max-width: 375px) {
+    @media (max-width: $small-screen) {
         margin: 20px 0 0 0;
     }
 

@@ -14,9 +14,7 @@
     align-items: center;
     justify-content: space-evenly;
 
-    @media (max-width: 375px) {
-
-        margin: 0 auto;
+    @media (max-width: $small-screen) {
 
         p {
            width: 34%;

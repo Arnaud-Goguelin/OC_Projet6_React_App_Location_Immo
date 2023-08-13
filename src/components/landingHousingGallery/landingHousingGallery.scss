@@ -32,7 +32,7 @@
     width: 70%;
 
     //Attention, ici, le media querie concerne le format desktop
-    @media (min-width: ($small-screen +1)) {
+    @media (min-width: (641px)) {
         width: 20%;
         //positionné au milieu de la page moins la moitié de la largeur de l'élément
         left: calc(50% - 10%);

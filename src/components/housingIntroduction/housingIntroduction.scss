@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 375px) {
+    @media (max-width: $small-screen) {
         flex-direction: column;
         justify-content: center;
         align-items: start;
@@ -17,7 +17,7 @@
         align-items:flex-start;
         color:$primary-color;
 
-        @media (max-width: 375px) {
+        @media (max-width: $small-screen) {
             margin: 0 0 15px 0;
         }
 
@@ -26,7 +26,7 @@
             font-weight: 500;
             font-size: 2em;
 
-            @media (max-width: 375px) {
+            @media (max-width: $small-screen) {
                 font-size: 1.5em;
             }
 
@@ -42,7 +42,7 @@
         flex-direction: column;
         justify-content:end;
         
-        @media (max-width: 375px) {
+        @media (max-width: $small-screen) {
             flex-direction: row-reverse;
             justify-content: space-between;
             width: 100%;

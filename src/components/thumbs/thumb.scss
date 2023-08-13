@@ -8,9 +8,9 @@
     background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 30%);
     position: relative;
 
-        @media (max-width: 375px) {
-            width: 335px;
-            height: 225px;
+        @media (max-width: $small-screen) {
+            width: auto;
+            height: auto;
             margin: 25px auto 0 auto;
     }
 

@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 375px) {
+    @media (max-width: $small-screen) {
         width: 90%;
         margin: 25px auto;
     }
@@ -30,14 +30,14 @@
                 text-decoration: underline;
             }
 
-            @media (max-width: 375px) {
+            @media (max-width: $small-screen) {
                 font-size: 1em;
                 margin: 0 0 0 15px;
                 text-transform: uppercase;
             }
     } 
 
-@media (max-width: 375px) {
+@media (max-width: $small-screen) {
 
         &__logo {
             width: 40%;
