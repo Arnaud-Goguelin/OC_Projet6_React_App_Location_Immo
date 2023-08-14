@@ -68,7 +68,7 @@ $primary-font-family : 'Montserrat';
 	font-weight: 300;
 	font-size: 1em;
 
-	@media (max-width: $extraLarge-screen) {
+	@media (max-width: calc($extraLarge-screen - 1px)) {
 		width: 90%;
 	}	
 }
