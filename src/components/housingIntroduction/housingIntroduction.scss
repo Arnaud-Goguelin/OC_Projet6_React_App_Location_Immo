@@ -1,11 +1,11 @@
-@import '../../index.scss';
+@use '../../assets/modules-variables';
 
 .Housing__introduction {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: $medium-screen) {
+    @media (max-width: modules-variables.$medium-screen) {
         flex-direction: column;
         justify-content: center;
         align-items: start;
@@ -15,9 +15,9 @@
         display: flex;
         flex-direction: column;
         align-items:flex-start;
-        color:$primary-color;
+        color: modules-variables.$primary-color;
 
-        @media (max-width: $small-screen) {
+        @media (max-width: modules-variables.$small-screen) {
             margin: 0 0 15px 0;
         }
 
@@ -26,11 +26,11 @@
             font-weight: 500;
             font-size: 2em;
 
-            @media (max-width: $medium-screen) {
+            @media (max-width: modules-variables.$medium-screen) {
                 font-size: 1.75em;
             }
 
-            @media (max-width: $small-screen) {
+            @media (max-width: modules-variables.$small-screen) {
                 font-size: 1.5em;
             }
 
@@ -46,7 +46,7 @@
         flex-direction: column;
         justify-content:end;
         
-        @media (max-width: $medium-screen) {
+        @media (max-width: modules-variables.$medium-screen) {
             flex-direction: row-reverse;
             justify-content: space-between;
             width: 100%;
@@ -56,7 +56,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                color:$primary-color;
+                color: modules-variables.$primary-color;
 
                 .Introduction__ownerContainer, img {
                     border-radius: 75px;

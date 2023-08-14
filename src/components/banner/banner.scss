@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@use '../../assets//modules-variables';
 
 .banner__container {
     margin: 25px auto 50px auto;
@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
 
-        @media (max-width: $small-screen) {
+        @media (max-width: modules-variables.$small-screen) {
             height: 110px;
             justify-content: start;
             margin: 25px auto 0 auto;
@@ -25,7 +25,7 @@
             mix-blend-mode: darken; 
         }
 
-        @media (max-width: $medium-screen) {
+        @media (max-width: modules-variables.$medium-screen) {
             height: 170px;
             justify-content: start;
             margin: 25px auto 0 auto;
@@ -35,21 +35,21 @@
             position: absolute;
             font-size: 3em;
             font-weight: 500;
-            color : $secondary-color;
+            color : modules-variables.$secondary-color;
             display: flex;
             text-align: center;
 
-                @media (max-width: $large-screen) {
+                @media (max-width: modules-variables.$large-screen) {
                     font-size: 2.5em;
                 }
 
-                @media (max-width: $medium-screen) {
+                @media (max-width: modules-variables.$medium-screen) {
                     white-space: pre-line;
                     margin: 0 0 0 15px;
                     text-align: start;
                 }
 
-                @media (max-width: $small-screen) {
+                @media (max-width: modules-variables.$small-screen) {
                     font-size: 1.75em;
                 }
         }

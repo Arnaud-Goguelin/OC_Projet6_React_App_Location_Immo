@@ -1,14 +1,14 @@
-@import '../../index.scss';
+@use '../../assets/modules-variables';
 
 .header {
-    font-family: $primary-font-family;
+    font-family: modules-variables.$primary-font-family;
     max-width: 1240px;
     margin: 50px auto 25px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: $extraLarge-screen) {
+    @media (max-width: modules-variables.$extraLarge-screen) {
         width: 90%;
         margin: 25px auto;
     }
@@ -20,7 +20,7 @@
 
     &__link {
         margin: 0 0 0 55px;
-        color:$primary-color;
+        color:modules-variables.$primary-color;
         text-decoration: none;
         font-size: 1.5em;
         font-weight: 500;
@@ -29,14 +29,14 @@
                 text-decoration: underline;
             }
 
-            @media (max-width: $small-screen) {
+            @media (max-width: modules-variables.$small-screen) {
                 font-size: 1em;
                 margin: 0 0 0 20px;
                 text-transform: uppercase;
             }
     } 
 
-    @media (max-width: $small-screen) {
+    @media (max-width: modules-variables.$small-screen) {
 
         &__logo {
             width: 30%;

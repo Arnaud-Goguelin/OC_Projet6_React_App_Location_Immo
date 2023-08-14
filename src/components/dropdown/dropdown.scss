@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@use '../../assets/modules-variables';
 
 .dropdown {
     margin: 25px 0;
@@ -8,7 +8,7 @@
     background-color: #F6F6F6;
     border-radius: 10px;
 
-    @media (max-width: $small-screen) {
+    @media (max-width: modules-variables.$small-screen) {
         margin: 20px 0 0 0;
     }
 
@@ -18,8 +18,8 @@
         height: 25px;
         padding: 10px 20px 10px 10px;
         border-radius: 10px;
-        background-color: $primary-color;
-        color:$secondary-color;
+        background-color: modules-variables.$primary-color;
+        color:modules-variables.$secondary-color;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -28,8 +28,8 @@
             width: 15px;
             height: 15px;
             background-color: transparent;
-            border-top: 3px solid $secondary-color;
-            border-right: 3px solid $secondary-color;
+            border-top: 3px solid modules-variables.$secondary-color;
+            border-right: 3px solid modules-variables.$secondary-color;
             border-bottom: none;
             border-left: none;
             cursor: pointer;
@@ -47,7 +47,7 @@
     }
 
     &__content {
-        color: $primary-color;
+        color: modules-variables.$primary-color;
         width: auto ;
         padding: 0px 20px;
         height: 0px;

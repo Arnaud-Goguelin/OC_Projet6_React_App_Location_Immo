@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@use '../../assets/modules-variables';
 
 .housingGallery__thumb {
     margin: 25px auto;
@@ -8,22 +8,22 @@
     background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 30%);
     position: relative;
 
-         @media (max-width: calc($extraLarge-screen - 1px)) {
+         @media (max-width: calc(modules-variables.$extraLarge-screen - 1px)) {
             margin: 20px;
     }
 
-        @media (max-width: $large-screen) {
+        @media (max-width: modules-variables.$large-screen) {
             width: 300px;
             height: 300px;
             margin: 20px auto;
     }
 
-        @media (max-width: $medium-screen) {
+        @media (max-width: modules-variables.$medium-screen) {
             width: auto;
             height: auto;
     }
 
-            @media (max-width: $small-screen) {
+            @media (max-width: modules-variables.$small-screen) {
             margin: 25px auto 0 auto;
     }
 
@@ -41,6 +41,6 @@
             position: absolute;
             left: 20px;
             bottom: 10px;
-            color: $secondary-color;
+            color: modules-variables.$secondary-color;
         }
 }

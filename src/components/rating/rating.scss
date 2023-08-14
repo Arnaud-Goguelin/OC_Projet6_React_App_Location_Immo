@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@use '../../assets/modules-variables';
 
 .Introduction__notationContainer{
     margin: 20px 0 0 0;
@@ -6,7 +6,7 @@
     display: flex;
     justify-content: end;
 
-    @media (max-width: $small-screen) {
+    @media (max-width: modules-variables.$small-screen) {
         margin:auto 0;
         justify-content: start;
     }

@@ -1,10 +1,10 @@
-@import '../../index.scss';
+@use '../../assets/modules-variables';
 
 .Housing__dropwdownContainer {
     display: flex;
     justify-content: space-between;
     
-    @media (max-width: $medium-screen) {
+    @media (max-width: modules-variables.$medium-screen) {
         flex-direction: column;
         margin: 0 0 30px 0;
     }
@@ -12,7 +12,7 @@
     > div {
         width: 47%;
 
-        @media (max-width: $medium-screen) {
+        @media (max-width: modules-variables.$medium-screen) {
             width: 100%;
         }
     }
