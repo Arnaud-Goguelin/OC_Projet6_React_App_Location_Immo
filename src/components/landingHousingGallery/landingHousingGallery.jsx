@@ -1,12 +1,12 @@
 import { useContext, useState, useRef, useEffect } from 'react';
-import { DataContext } from '../../utils/context';
+import { DataHousing } from '../../utils/context';
 import Thumb from '../thumbs/thumb'
 import Pagination from '../pagination/pagination';
 import './landingHousingGallery.scss'
 
 function HousingGallery() {
 
-    const { data, isLoading, error } = useContext(DataContext)
+    const { data, isLoading, error } = useContext(DataHousing)
 
     // Gestion de la pagination, il suffit de modifier les valeurs de limitPerPage (nb d'éléments affichés par page), 
     // dans la fonction defineLimitePerPage ,pour changer le nombre de page et les boutons de navigations associés.

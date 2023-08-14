@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { DataContext } from '../../utils/context';
+import { DataHousing } from '../../utils/context';
 import { useParams, Navigate } from 'react-router-dom';
 import Carousel from '../../components/housingCarousel/housingCarousel'
 import Introduction from '../../components/housingIntroduction/housingIntroduction';
@@ -9,7 +9,7 @@ import './housing.scss'
 function Housing() {
 
     const { id } = useParams()
-    const { data, isLoading, error } = useContext(DataContext)
+    const { data, isLoading, error } = useContext(DataHousing)
    
     
     if (isLoading) {

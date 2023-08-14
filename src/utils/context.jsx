@@ -1,17 +1,17 @@
 import { createContext } from "react";
 import useFetch from './useFetch'
 
-export const DataContext = createContext()
+export const DataHousing = createContext()
 
 
 function DataProvider({children}) {
 
-  const { data, isLoading, error } = useFetch('http://localhost:3000/housing.json');
+  const { data, isLoading, error } = useFetch('http://localhost:3000/housing.json')
 
   return (
-    <DataContext.Provider value={{ data, isLoading, error }}>
+    <DataHousing.Provider value={{ data, isLoading, error }}>
         {children}
-    </DataContext.Provider>
+    </DataHousing.Provider>
   )
 }
 

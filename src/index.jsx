@@ -1,7 +1,6 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import useFetch from './utils/useFetch'
 import DataProvider from './utils/context'
 import Header from './components/header/header'
 import Footer from './components/footer/footer'
@@ -35,9 +34,9 @@ root.render (
 
 
 // TO DO:
-// terminer la mise en page
-// terminer la gestion des erreurs
-// comment régler la hauteur du dropdown en fonction du texte afficher en préservant l'animation?
+// Pourquoi import aboutData from '../../data/about.json'; fonctionne et pas import aboutData from './/about.json';
+// Mon module _modules-variables.scss est'il correctement créé?
+// Je devrais importer tous les modules dans index.jsx pour qu'ils soient compiler en scss???
 
 // Utilisation des données dans:
 //  landingHousingGallery

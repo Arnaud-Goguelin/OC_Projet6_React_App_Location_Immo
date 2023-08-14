@@ -19,11 +19,13 @@
     }
 
         @media (max-width: modules-variables.$medium-screen) {
-            width: auto;
-            height: auto;
+            width: 400px;
+            height: 300px;
     }
 
             @media (max-width: modules-variables.$small-screen) {
+            width: 335px;
+            height: 255px;
             margin: 25px auto 0 auto;
     }
 
