@@ -1,11 +1,11 @@
-@use '../../assets/modules-variables';
+@use '../../variables';
 
 .Housing__introduction {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: modules-variables.$medium-screen) {
+    @media (max-width: variables.$medium-screen) {
         flex-direction: column;
         justify-content: center;
         align-items: start;
@@ -15,9 +15,9 @@
         display: flex;
         flex-direction: column;
         align-items:flex-start;
-        color: modules-variables.$primary-color;
+        color: variables.$primary-color;
 
-        @media (max-width: modules-variables.$small-screen) {
+        @media (max-width: variables.$small-screen) {
             margin: 0 0 15px 0;
         }
 
@@ -26,11 +26,11 @@
             font-weight: 500;
             font-size: 2em;
 
-            @media (max-width: modules-variables.$medium-screen) {
+            @media (max-width: variables.$medium-screen) {
                 font-size: 1.75em;
             }
 
-            @media (max-width: modules-variables.$small-screen) {
+            @media (max-width: variables.$small-screen) {
                 font-size: 1.5em;
             }
 
@@ -46,26 +46,25 @@
         flex-direction: column;
         justify-content:end;
         
-        @media (max-width: modules-variables.$medium-screen) {
+        @media (max-width: variables.$medium-screen) {
             flex-direction: row-reverse;
             justify-content: space-between;
             width: 100%;
         }
 
-            .Introduction__ownerContainer {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                color: modules-variables.$primary-color;
+    .Introduction__ownerContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: variables.$primary-color;
 
-                .Introduction__ownerContainer, img {
-                    border-radius: 75px;
-                    width: 65px;
-                    height: 65px;
-                    margin: 0 0 0 20px;
-                }
-
+            .Introduction__ownerContainer, img {
+                border-radius: 75px;
+                width: 65px;
+                height: 65px;
+                margin: 0 0 0 20px;
             }
-    }
 
+        }
+    }
 }

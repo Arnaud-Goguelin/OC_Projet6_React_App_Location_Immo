@@ -48,7 +48,6 @@ function Carousel({pictures}) {
             </p>
         </div>
     )
-
 }
 
 export default Carousel

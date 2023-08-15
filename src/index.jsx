@@ -34,7 +34,7 @@ root.render (
 
 
 // TO DO:
-// Pourquoi import aboutData from '../../data/about.json'; fonctionne et pas import aboutData from './/about.json';
+// Pourquoi import aboutData from '../../data/about.json'; fonctionne et pas import aboutData from './about.json';
 // Mon module _modules-variables.scss est'il correctement créé?
 // Je devrais importer tous les modules dans index.jsx pour qu'ils soient compiler en scss???
 

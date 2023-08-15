@@ -1,4 +1,4 @@
-@use '../../assets/modules-variables';
+@use '../../variables';
 
 .Introduction__tagsContainer {
     display: flex;
@@ -8,21 +8,21 @@
         width: auto;
         padding: 5px 40px;
         border-radius: 10px;
-        background-color: modules-variables.$primary-color;
-        color: modules-variables.$secondary-color;
+        background-color: variables.$primary-color;
+        color: variables.$secondary-color;
         text-align: center;
         align-self: center;
         font-size: 1em;
 
-        @media (max-width: modules-variables.$large-screen) {
+        @media (max-width: variables.$large-screen) {
             padding: 5px 30px;
         }
 
-        @media (max-width: modules-variables.$medium-screen) {
+        @media (max-width: variables.$medium-screen) {
             padding: 5px 20px;
         }
 
-        @media (max-width: modules-variables.$small-screen) {
+        @media (max-width: variables.$small-screen) {
             padding: 5px 5px;
             font-size: 0.8em;
         }

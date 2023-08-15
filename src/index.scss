@@ -1,4 +1,4 @@
-@use './assets/modules-variables';
+@use './variables';
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -54,11 +54,11 @@ table {
 .globalStyle {
     max-width: 1240px;
     margin: auto;
-	font-family: modules-variables.$primary-font-family;
+	font-family: variables.$primary-font-family;
 	font-weight: 300;
 	font-size: 1em;
 
-	@media (max-width: calc(modules-variables.$extraLarge-screen - 1px)) {
+	@media (max-width: calc(variables.$extraLarge-screen - 1px)) {
 		width: 90%;
 	}	
 }

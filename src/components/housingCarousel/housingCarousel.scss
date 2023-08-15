@@ -1,4 +1,4 @@
-@use '../../assets/modules-variables';
+@use '../../variables';
 
 .carousel {
     margin: 25px 0;
@@ -9,17 +9,17 @@
     align-items: center;
     position: relative;
 
-        @media (max-width: modules-variables.$large-screen) {
+        @media (max-width: variables.$large-screen) {
             width: auto;
             height: 350px;
     }
 
-        @media (max-width: modules-variables.$medium-screen) {
+        @media (max-width: variables.$medium-screen) {
             width: auto;
             height: 300px;
     }
 
-        @media (max-width: modules-variables.$small-screen) {
+        @media (max-width: variables.$small-screen) {
             height: 225px;
     }
 
@@ -45,8 +45,8 @@
             background: transparent;
             width: 40px;
             height: 40px;
-            border-top: 5px solid modules-variables.$secondary-color;
-            border-right: 5px solid modules-variables.$secondary-color;
+            border-top: 5px solid variables.$secondary-color;
+            border-right: 5px solid variables.$secondary-color;
             border-left: none;
             border-bottom: none;
 
@@ -58,11 +58,11 @@
                     transform: rotate(45deg);
                 }
 
-                @media (max-width: modules-variables.$small-screen) {
+                @media (max-width: variables.$small-screen) {
                     width: 20px;
                     height: 20px;
-                    border-top: 3px solid modules-variables.$secondary-color;
-                    border-right: 3px solid modules-variables.$secondary-color;
+                    border-top: 3px solid variables.$secondary-color;
+                    border-right: 3px solid variables.$secondary-color;
                 }
         }
     }
@@ -71,9 +71,9 @@
         position: absolute;
         z-index: 2;
         bottom: 10px;
-        color: modules-variables.$secondary-color;
+        color: variables.$secondary-color;
         
-        @media (max-width: modules-variables.$medium-screen) {
+        @media (max-width: variables.$medium-screen) {
             display: none;
         }
     }

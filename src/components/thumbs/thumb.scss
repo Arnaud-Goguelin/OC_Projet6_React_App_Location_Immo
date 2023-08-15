@@ -1,4 +1,4 @@
-@use '../../assets/modules-variables';
+@use '../../variables';
 
 .housingGallery__thumb {
     margin: 25px auto;
@@ -8,22 +8,22 @@
     background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 30%);
     position: relative;
 
-         @media (max-width: calc(modules-variables.$extraLarge-screen - 1px)) {
+         @media (max-width: calc(variables.$extraLarge-screen - 1px)) {
             margin: 20px;
     }
 
-        @media (max-width: modules-variables.$large-screen) {
+        @media (max-width: variables.$large-screen) {
             width: 300px;
             height: 300px;
             margin: 20px auto;
     }
 
-        @media (max-width: modules-variables.$medium-screen) {
+        @media (max-width: variables.$medium-screen) {
             width: 400px;
             height: 300px;
     }
 
-            @media (max-width: modules-variables.$small-screen) {
+            @media (max-width: variables.$small-screen) {
             width: 335px;
             height: 255px;
             margin: 25px auto 0 auto;
@@ -43,6 +43,6 @@
             position: absolute;
             left: 20px;
             bottom: 10px;
-            color: modules-variables.$secondary-color;
+            color: variables.$secondary-color;
         }
 }

@@ -13,6 +13,4 @@ function Banner({image, alt, text}) {
     )
 }
 
-export default Banner 
-
-//
+export default Banner

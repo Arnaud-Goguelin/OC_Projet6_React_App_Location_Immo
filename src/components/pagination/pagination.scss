@@ -1,13 +1,13 @@
-@use '../../assets/modules-variables';
+@use '../../variables';
 
 .pagination {
-    color: modules-variables.$primary-color;
+    color: variables.$primary-color;
     display: flex;
     justify-content: space-evenly;
     align-items:center;
     list-style-type: none;
 
-    @media (max-width: modules-variables.$small-screen) {
+    @media (max-width: variables.$small-screen) {
         justify-content: space-around;
     }
 
@@ -18,7 +18,7 @@
 
         .pagination__Button {
             background: transparent;
-            color: modules-variables.$primary-color;
+            color: variables.$primary-color;
             border: none;
             cursor: pointer;
 
@@ -29,8 +29,8 @@
             &.navigatation {
                 width: 10px;
                 height: 10px;
-                border-top: 2px solid modules-variables.$primary-color;
-                border-right: 2px solid modules-variables.$primary-color;
+                border-top: 2px solid variables.$primary-color;
+                border-right: 2px solid variables.$primary-color;
 
                 &.previous {
                     position: absolute;

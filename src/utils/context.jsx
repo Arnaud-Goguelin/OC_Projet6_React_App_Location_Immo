@@ -16,5 +16,3 @@ function DataProvider({children}) {
 }
 
 export default DataProvider;
-
-//pourquoi créer un composant pour passer les données alors que je peux les passer en props?
