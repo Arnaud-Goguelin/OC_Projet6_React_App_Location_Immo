@@ -13,7 +13,7 @@ function Pagination({ pages, currentPage, nextPage, previousPage, selectPage }) 
                 </button>
             </li>
             {pages.map((page) =>
-                <li key={page}>
+                <li key={`page: ${page}`}>
                     <button 
                         onClick={() => selectPage(page)} 
                         className={`pagination__Button ${currentPage === page ? 'active' : ''}`} 
