@@ -10,10 +10,10 @@ function Introduction({title, location, tags, host, rating}) {
     let rateRange = []
 
     function completeRateRange() {
-        for (let r = 0; r <= maxRate; r++) {
+        // on initialise r à 1 pour éviter l'index 0 ce qui évite la génération d'une 6e étoile.
+        for (let r = 1; r <= maxRate; r++) {
             rateRange.push(r)
         }
-        rateRange.splice(0,1)
     }
 
     completeRateRange()
