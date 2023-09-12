@@ -32,11 +32,11 @@ root.render (
     </React.StrictMode>
   )
 
-
 // TO DO:
-// Pourquoi import aboutData from '../../data/about.json'; fonctionne et pas import aboutData from './about.json';
-// Mon module _modules-variables.scss est'il correctement créé?
-// Je devrais importer tous les modules dans index.jsx pour qu'ils soient compiler en scss???
+// Banner : mettre le slogan en "h1" et ne pas générer de h1 du tout sur la page à propos.
+// Corriger TAGS et faire un compo TAG affichant 1 seul mot clef et l'itération sur les données ce fait dans le compo parent
+// Pagination: en format mobile, faire un bouton afficher plus et redéclencher l'affichage. format deskopt, masquer les n° de page dès qu'il y en a trop.
+// Error: plutôt que de rediriger vers la page "error", faire <Navigate to='/page non trouvée' />, cela redirigera vers <Navigate to='/*' /> et la page 404 tout de même
 
 // Utilisation des données dans:
 //  landingHousingGallery

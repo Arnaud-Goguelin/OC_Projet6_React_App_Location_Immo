@@ -10,8 +10,8 @@ function Housing() {
 
     const { id } = useParams()
     const { data, isLoading, error } = useContext(DataHousing)
-   
-    
+
+
     if (isLoading) {
         return (
             <span>Patientez, chargement des données</span>
@@ -24,16 +24,16 @@ function Housing() {
 
     if (data) {
         const rental = data.find(rental => rental.id === id)
-        
-        if (rental != undefined) {
-            
+
+        if (rental !== undefined) {
+
             return (
                 <section key={`${rental.id}-Housing`}>
-                    <Carousel 
+                    <Carousel
                         key={rental.pictures.indexOf()}
                         pictures={rental.pictures}
                     />
-                    <Introduction 
+                    <Introduction
                         key={`${rental.id}-Introduction`}
                         title={rental.title}
                         location={rental.location}
@@ -43,18 +43,18 @@ function Housing() {
                     />
                     <div className='Housing__dropwdownContainer'>
                         <div>
-                        <Dropdown
-                            key={`${id}-Description`}
-                            dropdownTitle={'Description'}
-                            dropdownContent={rental.description}
-                        />
+                            <Dropdown
+                                key={`${id}-Description`}
+                                dropdownTitle={'Description'}
+                                dropdownContent={rental.description}
+                            />
                         </div>
                         <div>
-                        <Dropdown
-                            key={`${rental.id}-Equipements`}
-                            dropdownTitle={'Equipements'}
-                            dropdownContent={rental.equipments}
-                        />
+                            <Dropdown
+                                key={`${rental.id}-Equipements`}
+                                dropdownTitle={'Equipements'}
+                                dropdownContent={rental.equipments}
+                            />
                         </div>
                     </div>
                 </section>
