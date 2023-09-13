@@ -5,54 +5,55 @@
     height: 200px;
     border-radius: 20px;
     position: relative;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 
-        @media (max-width: variables.$small-screen) {
-            height: 110px;
-            justify-content: start;
-            margin: 25px auto 0 auto;
-        }
+    @media (max-width: variables.$small-screen) {
+        height: 110px;
+        justify-content: flex-start;
+        margin: 25px auto 0 auto;
+    }
 
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit:cover;
-            border-radius: 20px;
-            mix-blend-mode: darken; 
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        mix-blend-mode: darken;
+    }
+
+    @media (max-width: variables.$medium-screen) {
+        height: 170px;
+        justify-content: flex-start;
+        margin: 25px auto 0 auto;
+    }
+
+    .banner__container,
+    p {
+        position: absolute;
+        font-size: 3em;
+        font-weight: 500;
+        color: variables.$secondary-color;
+        display: flex;
+        text-align: center;
+
+        @media (max-width: variables.$large-screen) {
+            font-size: 2.5em;
         }
 
         @media (max-width: variables.$medium-screen) {
-            height: 170px;
-            justify-content: start;
-            margin: 25px auto 0 auto;
+            white-space: pre-line;
+            margin: 0 0 0 15px;
+            text-align: flex-start;
         }
 
-        .banner__container, p {
-            position: absolute;
-            font-size: 3em;
-            font-weight: 500;
-            color : variables.$secondary-color;
-            display: flex;
-            text-align: center;
-
-                @media (max-width: variables.$large-screen) {
-                    font-size: 2.5em;
-                }
-
-                @media (max-width: variables.$medium-screen) {
-                    white-space: pre-line;
-                    margin: 0 0 0 15px;
-                    text-align: start;
-                }
-
-                @media (max-width: variables.$small-screen) {
-                    font-size: 1.75em;
-                }
+        @media (max-width: variables.$small-screen) {
+            font-size: 1.75em;
         }
+    }
 
 
 }

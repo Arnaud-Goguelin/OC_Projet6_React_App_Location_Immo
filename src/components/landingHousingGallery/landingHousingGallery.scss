@@ -7,40 +7,40 @@
     border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: flex-start;
     position: relative;
     --screenWidth: desktop;
 
-        @media (min-width: variables.$extraLarge-screen) {
-            > :nth-last-child(-n+2) {
-                margin: 25px;
-            }
+    @media (min-width: variables.$extraLarge-screen) {
+        > :nth-last-child(-n+2) {
+            margin: 25px;
         }
+    }
 
-        @media (max-width: calc( variables.$extraLarge-screen - 1px)) {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 1200px;
-            padding: 0 35px 10px 35px;
-        }
-    
-        @media (max-width: variables.$large-screen) {
-            height: 1100px;
-            padding: 0 25px 10px 25px;
-        }
+    @media (max-width: calc(variables.$extraLarge-screen - 1px)) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 1200px;
+        padding: 0 35px 10px 35px;
+    }
 
-        @media (max-width: variables.$medium-screen) {
-            height: auto;
-            background-color: transparent;
-            margin: 20px auto;
-            padding: 0 0 50px 0;
-            --screenWidth: mobile;
-        }
+    @media (max-width: variables.$large-screen) {
+        height: 1100px;
+        padding: 0 25px 10px 25px;
+    }
 
-        @media (max-width: variables.$small-screen) {
-            margin: 0;
-        }
+    @media (max-width: variables.$medium-screen) {
+        height: auto;
+        background-color: transparent;
+        margin: 20px auto;
+        padding: 0 0 50px 0;
+        --screenWidth: mobile;
+    }
+
+    @media (max-width: variables.$small-screen) {
+        margin: 0;
+    }
 }
 
 .pagination {
@@ -53,5 +53,5 @@
         width: 40%;
         //positionné au milieu de la page moins la moitié de la largeur de l'élément
         left: calc(50% - 20%);
-    }  
+    }
 }

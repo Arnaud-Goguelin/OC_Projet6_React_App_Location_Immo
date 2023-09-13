@@ -8,7 +8,7 @@
     @media (max-width: variables.$medium-screen) {
         flex-direction: column;
         justify-content: center;
-        align-items: start;
+        align-items: flex-start;
     }
 
     .Introduction__rentalPresentation {
