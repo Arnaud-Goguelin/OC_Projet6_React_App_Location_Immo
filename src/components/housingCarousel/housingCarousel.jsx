@@ -17,6 +17,7 @@ function Carousel({pictures}) {
         const timer = setTimeout(nextPictureIndex, 3000);
         return () => clearTimeout(timer)
         }
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    ,[currentPictureIndex])
     
 
