@@ -24,6 +24,8 @@ function Carousel({pictures}) {
         <div 
             className='carousel' aria-label={`Succession de photos, avec animation de défilement, présentant la location`}
         >
+            {/* après teste NVDA, le mot 'photo' dans l'attribut alt est nécessaire pour une bonne lecture par les TA  */}
+            {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
             <img src={pictures[currentPictureIndex]} alt={`Photo défilante n°${currentPictureIndex + 1}`} />
             <div 
                 className={pictures.length === 1 ? 'inactive' :'carousel__buttonContainer'}

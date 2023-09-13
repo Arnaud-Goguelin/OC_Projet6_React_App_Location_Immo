@@ -17,6 +17,7 @@ function Pagination({ pages, currentPage, nextPage, previousPage, selectPage }) 
                     <button 
                         onClick={() => selectPage(page)} 
                         className={`pagination__Button ${currentPage === page ? 'active' : ''}`} 
+                        // eslint-disable-next-line jsx-a11y/aria-proptypes
                         aria-pressed={`${currentPage === page ? 'true' : 'false'}`}
                         aria-label={`Afficher la page n°${page}`}
                     >
