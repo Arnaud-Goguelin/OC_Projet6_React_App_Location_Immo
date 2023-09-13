@@ -20,21 +20,21 @@
 
     &__link {
         margin: 0 0 0 55px;
-        color:variables.$primary-color;
+        color: variables.$primary-color;
         text-decoration: none;
         font-size: 1.5em;
         font-weight: 500;
-        
-            &.active {
-                text-decoration: underline;
-            }
 
-            @media (max-width: variables.$small-screen) {
-                font-size: 1em;
-                margin: 0 0 0 20px;
-                text-transform: uppercase;
-            }
-    } 
+        &.active {
+            text-decoration: underline;
+        }
+
+        @media (max-width: variables.$small-screen) {
+            font-size: 1em;
+            margin: 0 0 0 20px;
+            text-transform: uppercase;
+        }
+    }
 
     @media (max-width: variables.$small-screen) {
 
@@ -45,7 +45,7 @@
         nav {
             width: 60%;
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
         }
     }
 }

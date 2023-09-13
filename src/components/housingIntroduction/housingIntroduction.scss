@@ -14,7 +14,7 @@
     .Introduction__rentalPresentation {
         display: flex;
         flex-direction: column;
-        align-items:flex-start;
+        align-items: flex-start;
         color: variables.$primary-color;
 
         @media (max-width: variables.$small-screen) {
@@ -42,23 +42,24 @@
     }
 
     .Introduction__ownerPresentation {
-        display:flex;
+        display: flex;
         flex-direction: column;
-        justify-content:end;
-        
+        justify-content: flex-end;
+
         @media (max-width: variables.$medium-screen) {
             flex-direction: row-reverse;
             justify-content: space-between;
             width: 100%;
         }
 
-    .Introduction__ownerContainer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: variables.$primary-color;
+        .Introduction__ownerContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: variables.$primary-color;
 
-            .Introduction__ownerContainer, img {
+            .Introduction__ownerContainer,
+            img {
                 border-radius: 75px;
                 width: 65px;
                 height: 65px;

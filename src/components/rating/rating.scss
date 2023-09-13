@@ -1,14 +1,14 @@
 @use '../../variables';
 
-.Introduction__notationContainer{
+.Introduction__notationContainer {
     margin: 20px 0 0 0;
     width: auto;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
     @media (max-width: variables.$small-screen) {
-        margin:auto 0;
-        justify-content: start;
+        margin: auto 0;
+        justify-content: flex-start;
     }
 
     .Introduction__notationStar {
