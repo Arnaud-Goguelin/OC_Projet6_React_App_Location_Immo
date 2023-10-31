@@ -3,6 +3,7 @@ Organisme de Formation: Openclassrooms
 
 ### Projet 6 : Créez une application web de location immobilière avec React
 **Projet validé**
+[Site deployé](https://p6appimmodeployed.pages.dev/)
 
 ### Consignes du projet:
   - Lien vers a maquette à intégrer: [Figma_Kasa](https://www.figma.com/file/qEno0LwL4ZLkWyeY59kxp1/UI-Design-Kasa-FR?type=design&node-id=0-1&mode=design))
