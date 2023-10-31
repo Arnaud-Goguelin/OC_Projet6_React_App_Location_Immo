@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+## Formation: Développeur Web
+Organisme de Formation: Openclassrooms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Projet 6 : Créez une application web de location immobilière avec React
+**Projet validé**
 
-## Available Scripts
+### Consignes du projet:
+  - Lien vers a maquette à intégrer: [Figma_Kasa](https://www.figma.com/file/qEno0LwL4ZLkWyeY59kxp1/UI-Design-Kasa-FR?type=design&node-id=0-1&mode=design))
+  - Lien vers le JSON de données: [JSON_Kasa](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json)
+  - Styling: Tout le style CSS doit être codé en utilisant Sass
+  - Pas de librairie React externe
+  - Développer l’ensemble de l’application, les composants React, les routes React Router
+  - Pour le défilement des photos dans la galerie :
+        Si l'utilisateur se trouve à la première image et qu'il clique sur "Image précédente", la galerie affiche la dernière image. 
+        Inversement, quand l'image affichée est la dernière de la galerie, si l'utilisateur clique sur "Image suivante", la galerie affiche la première image. 
+        S'il n'y a qu'une seule image, les boutons "Suivant" et "Précédent" ainsi que la numérotation n'apparaissent pas.
+  - La galerie doit toujours rester de la même hauteur, celle indiquée sur la maquette Figma. Les images seront donc coupées et centrées dans le cadre de l’image.
+  - Collapse : Par défaut, les Collapses sont fermés à l'initialisation de la page. 
+    Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer.
+    Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
 
-In the project directory, you can run:
+### Pistes d'amélioration présentées lors de la soutenance
+  - Erratum: fonction CreateNewCategory hors cahier des charges (développement abrégé durant le projet)
+  - Pour plus de praticité, mettre en place une redirection vers la modale d'ajout de projet plutôt que la gallerie (redirection vers la gallerie pour plus de fluidité lors de la soutenance)
+  - Redondance des messages d'erreurs et du boutont "valider" avec l'attribut "disabled" lors de l'ajout d'un projet, un message simple ou une légende (ex: astérix rouge pour chaque champ requis) serait suffisant pour ce site dédié à un seul utilisateur et non au grand public
+  - Accessibilité du site à mettre en place.
+    
+### Compétences évaluées et commentaires associés:
+  1. Développer une interface web avec Sass **Validé**
+      *Commentaires :
+        L'application est parfaitement intégrée et utilise Sass.
+        Le responsive fonctionne égalemen très bien.
+        Du bon boulot*
 
-### `npm start`
+2. Mettre en œuvre des animations CSS **Validé**
+      *Commentaires :
+        L'animation demandée est bien réalisée*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Initialiser une application avec Create React App **Validé**
+      *Commentaires :
+        L'app est bien initialisée avec CRA.
+        Seules les librairies react-router et SASS sont installées.
+        Pas d'erreur ni de warning*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Configurer la navigation entre les pages de l'application avec React Router **Validé**
+      *Commentaires :
+        Bonne gestion du routing et de la page 404, qui se déclenche bien lors d'un mauvais path ou mauvais id logement*
 
-### `npm test`
+5. Développer des éléments de l'interface d'un site web grâce à des composants React **Validé**
+      *Commentaires :
+        Tous les composants demandés (et plus encore) sont implémentés.
+        Le fonctionnement du carrousel est OK, avec des petis ajouts en plus.
+        Collapse OK également.*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Soutenance**
+*Remarques :
+Très bonne soutenance à l'image du projet.*
