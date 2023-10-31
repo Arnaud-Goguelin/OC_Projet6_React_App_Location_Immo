@@ -20,10 +20,8 @@ Organisme de Formation: Openclassrooms
     Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
 
 ### Pistes d'amélioration présentées lors de la soutenance
-  - Erratum: fonction CreateNewCategory hors cahier des charges (développement abrégé durant le projet)
-  - Pour plus de praticité, mettre en place une redirection vers la modale d'ajout de projet plutôt que la gallerie (redirection vers la gallerie pour plus de fluidité lors de la soutenance)
-  - Redondance des messages d'erreurs et du boutont "valider" avec l'attribut "disabled" lors de l'ajout d'un projet, un message simple ou une légende (ex: astérix rouge pour chaque champ requis) serait suffisant pour ce site dédié à un seul utilisateur et non au grand public
-  - Accessibilité du site à mettre en place.
+  - Pagination à améliorer : réduire le nombre de page affichées si elles deviennent trop nombreuses, trouver une autre manière de gérer la pagination au format mobile (réponse au slide ou créer un bouton "Afficher Plus")
+  - Hook personnalisé useFetch à améliorer: en l'état si l'on souhaite faire un autre appel à une API sur un autre fichier de données, il est nécessaire de créer un autre composant provider.
     
 ### Compétences évaluées et commentaires associés:
   1. Développer une interface web avec Sass **Validé**
